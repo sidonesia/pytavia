@@ -1,0 +1,2905 @@
+{
+	"id": "08472c2e-991d-b369-360d-318c85e40adf",
+	"name": "MOBILE LAKUEMAS LOCAL",
+	"description": "this is lakuemas mobile apps services",
+	"order": [],
+	"folders": [
+		{
+			"id": "1b96b003-8bca-e7ae-155e-daea4c69a3c1",
+			"name": "BUY GOLD",
+			"description": "this is folder contain the API that required for buy GOLD",
+			"order": [
+				"c67696a7-3397-5362-3fb5-7d1fb2d9ecef",
+				"c93ed15c-a607-0c99-a899-b2b27399e6a8",
+				"87d934d7-195e-3fd1-ad17-fc6e8b20f4ff"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"id": "da4e1d05-a9df-3acd-778e-35707fcccd42",
+			"name": "DASHBOARD",
+			"description": "this is folder contain the API that required to display information in Mobile Apps Dashboard",
+			"order": [
+				"c3fb6582-94ca-a053-6f90-e8dd63ebf340",
+				"cebdbc75-1b79-da0c-1c8c-52d9d6994a7c",
+				"9bdaf100-3422-2665-545e-55a4df37a285"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"name": "DEPOSIT GOLD",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"order": [
+				"3e36db50-a206-fb67-08d7-57331bdacb8e",
+				"1f4b1f72-6fcb-5e8b-8708-96adab80d054",
+				"e39a23c6-a753-532e-e346-8cc37b2ec3a0",
+				"65bb55a0-517e-7b66-dbc5-8c29ab1a2b73",
+				"c97e8f8c-8563-f571-aace-556d66809155",
+				"135357e9-3a71-8787-dc58-9ccf44b9c32e"
+			],
+			"owner": "4288534",
+			"folders_order": [],
+			"id": "35993242-c29b-9b65-1c27-e523155ee999"
+		},
+		{
+			"name": "GOLD DETAILS",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"order": [
+				"259f90b2-109c-2838-714b-eb48483f1806"
+			],
+			"owner": "4288534",
+			"folders_order": [],
+			"id": "df5d9bcd-2018-a9bf-dfc0-5638be0f7a55"
+		},
+		{
+			"id": "4cc6c846-12f3-cd8e-00e3-827f5240aec2",
+			"name": "LOGIN",
+			"description": "this is folder contain the API that required for Login",
+			"order": [
+				"81304875-2552-6f60-1fe7-310abef0c79f",
+				"05926a14-cd50-00de-a59f-bd54ff3d340e"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"id": "b623c437-b6eb-fe0e-4be4-5ba378cdcbef",
+			"name": "PAYMENTS",
+			"description": "this is folder contain the API that required to display payments information",
+			"order": [
+				"39459661-087a-4f24-5e34-f6f0dd78fd4c"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"id": "e398de97-dc65-f737-6109-cf68fe73be1c",
+			"name": "REGISTRATION",
+			"description": "this is folder contain the API that required in order to Register / Sign Up new user",
+			"order": [
+				"a6a433a4-ce0d-9675-5684-08bd016d828c",
+				"ebd225f6-ef45-5216-812e-eba008884ace"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"id": "7e8933f7-b22d-c08b-5641-cdb019a292c3",
+			"name": "SELL GOLD",
+			"description": "this is folder contain the API that required for selling gold",
+			"order": [
+				"3435209c-8b16-5224-a6df-84168483b572",
+				"4286a659-62a3-7bba-b8c4-a42271e5031b"
+			],
+			"folders_order": [],
+			"owner": "4288534",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf"
+		},
+		{
+			"name": "TRANSFER GOLD",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"order": [
+				"b1483201-1685-6e36-31c1-dbfd0ebb7c57",
+				"952b8627-d19a-00fd-ba48-98f5a62afca1",
+				"70bd2c5b-1ad6-ac95-e604-baeda5f815f1"
+			],
+			"owner": "4288534",
+			"folders_order": [],
+			"id": "7a2eeb51-2dac-87d8-1c9a-afb72acd3dab"
+		}
+	],
+	"folders_order": [
+		"e398de97-dc65-f737-6109-cf68fe73be1c",
+		"4cc6c846-12f3-cd8e-00e3-827f5240aec2",
+		"da4e1d05-a9df-3acd-778e-35707fcccd42",
+		"b623c437-b6eb-fe0e-4be4-5ba378cdcbef",
+		"7e8933f7-b22d-c08b-5641-cdb019a292c3",
+		"1b96b003-8bca-e7ae-155e-daea4c69a3c1",
+		"7a2eeb51-2dac-87d8-1c9a-afb72acd3dab",
+		"35993242-c29b-9b65-1c27-e523155ee999",
+		"df5d9bcd-2018-a9bf-dfc0-5638be0f7a55"
+	],
+	"timestamp": 1534845923429,
+	"owner": "4288534",
+	"public": false,
+	"requests": [
+		{
+			"id": "05926a14-cd50-00de-a59f-bd54ff3d340e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_forgot_passsword",
+			"folder": "4cc6c846-12f3-cd8e-00e3-827f5240aec2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "kelvin@dealoka.com",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+					"sessionValue": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+					"description": "email",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847767373,
+			"name": "USER FORGOT PASSWORD",
+			"description": "this is api for sending forgot password email",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "d54779e7-6afc-4848-a5a7-4e1d91f92c2d",
+						"description": "this is api for sending forgot password email",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "email",
+								"value": "kelvin@dealoka.com",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+								"sessionValue": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+								"description": "email",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_forgot_passsword",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"d54779e7-6afc-4848-a5a7-4e1d91f92c2d\",\"description\":\"this is api for sending forgot password email\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"email\",\"value\":\"kelvin@dealoka.com\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d\",\"sessionValue\":\"d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d\",\"description\":\"email\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_forgot_passsword\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "09832342-71dd-fb98-9a42-fe52aa12bd9f",
+					"name": "USER FORGOT PASSWORD",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 02 Jul 2018 22:00:43 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=75153442b2023f86c91547618c03fdb4e0c444f5; expires=Mon, 02 Jul 2018 23:00:43 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "75153442b2023f86c91547618c03fdb4e0c444f5",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"SEND_RESET_EMAIL_SUCCESS\", \"message_data\": {\"em_token\": \"111db17c1d4b378ff8bfe04292de38b4\", \"token\": \"56bdfff5f5ada03321e961e89266af33\"}, \"message_desc\": \"Instruksi pergantian password telah dikirimkan ke email anda, mohon cek email anda untuk  mengubah password anda\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				},
+				{
+					"request": {
+						"id": "4fa236e8-3603-4ca5-a957-f303c38b5c03",
+						"description": "this is api for sending forgot password email",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "email",
+								"value": "kelvin@dealoka.com",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+								"sessionValue": "d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d",
+								"description": "email",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_forgot_passsword",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"4fa236e8-3603-4ca5-a957-f303c38b5c03\",\"description\":\"this is api for sending forgot password email\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"email\",\"value\":\"kelvin@dealoka.com\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d\",\"sessionValue\":\"d9c46070e516068b34ba95d41e4ddd37891e2ad3d7c2d542ded3a55afd76394d\",\"description\":\"email\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_forgot_passsword\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "f133ea4c-4b8f-c604-b03f-3a6860a6a0cc",
+					"name": "USER FORGOT PASSWORD",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "181",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Aug 2018 15:18:44 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=dfde82fcbbb0f801b86b232a48539ddb9e7a8d60; expires=Thu, 09 Aug 2018 16:18:44 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "dfde82fcbbb0f801b86b232a48539ddb9e7a8d60",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"SEND_FORGOT_EMAIL_SUCCESS\", \"message_desc\": \"Instruksi pergantian password berhasil dikirim\", \"message_data\": {}, \"call_id\": \"API_CALL_1533827924221844_7303341\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "135357e9-3a71-8787-dc58-9ccf44b9c32e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_download_certificate?certificate_id=653696519&customer_id=94577756",
+			"folder": "45d44ff5-b02e-6b22-71e8-45f3f1c8d645",
+			"queryParams": [
+				{
+					"key": "certificate_id",
+					"value": "653696519",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "customer_id",
+					"value": "94577756",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535107958123,
+			"name": "CERTIFICATE DOWNLOAD",
+			"description": "this is api for downloading the certificate",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "1f4b1f72-6fcb-5e8b-8708-96adab80d054",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_deposit_extend",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"data": [],
+			"dataMode": "raw",
+			"name": "GET DEPOSIT EXTEND",
+			"description": "this is api for getting deposit extend that available",
+			"descriptionFormat": "html",
+			"time": 1535022206328,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "35993242-c29b-9b65-1c27-e523155ee999",
+			"rawModeData": ""
+		},
+		{
+			"id": "259f90b2-109c-2838-714b-eb48483f1806",
+			"headers": "",
+			"headerData": [],
+			"url": "http://preprod-mobile-lakumas.dealoka.com/api_get_user_wallets",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "62790906",
+					"type": "text"
+				},
+				{
+					"key": "wallet_type",
+					"value": "LM",
+					"description": "LT LB LM ALL",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "15a5d36c28b6b79465938506158b7ea7c3b5a7f7bb6eb74c16a73ca2f2bd1cbf",
+					"sessionValue": "15a5d36c28b6b79465938506158b7ea7c3b5a7f7bb6eb74c16a73ca2f2bd1cbf",
+					"description": "customer_id + wallet_type",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"name": "GET USER WALLETS",
+			"description": "this is api for get user wallets available",
+			"descriptionFormat": "html",
+			"time": 1535080522012,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "df5d9bcd-2018-a9bf-dfc0-5638be0f7a55"
+		},
+		{
+			"id": "3435209c-8b16-5224-a6df-84168483b572",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_sell_gold_checkout",
+			"folder": "7e8933f7-b22d-c08b-5641-cdb019a292c3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "wallet_id",
+					"value": "581751983",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "customer_id",
+					"value": "64804458",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "weight",
+					"value": "0.2",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "token",
+					"value": "38726b9c49d8efac099539d3c52e764e6ce6e224128c2ce22e5067066487cf7d",
+					"type": "text",
+					"enabled": true,
+					"description": "wallet_id + customer_id + weight"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535014504288,
+			"name": "SELL CHECKOUT",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "39459661-087a-4f24-5e34-f6f0dd78fd4c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_available_payments",
+			"folder": "b623c437-b6eb-fe0e-4be4-5ba378cdcbef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847800218,
+			"name": "GET AVAILABLE PAYMENTS",
+			"description": "this API for get all available payments like Virtual Account, Manual Transfer",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "1dbe1ea5-0dde-4b32-bb37-70f911c27376",
+						"description": "this API for get all available payments like Virtual Account, Manual Transfer",
+						"method": "GET",
+						"headers": "",
+						"dataMode": "raw",
+						"data": [],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_get_available_payments",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"1dbe1ea5-0dde-4b32-bb37-70f911c27376\",\"description\":\"this API for get all available payments like Virtual Account, Manual Transfer\",\"method\":\"GET\",\"headers\":\"\",\"dataMode\":\"raw\",\"data\":[],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_get_available_payments\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "b402a377-e80c-e3ba-bf2f-e62fbc2e61f2",
+					"name": "GET AVAILABLE PAYMENTS EXAMPLE",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1564",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 May 2018 13:29:28 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=79b8b1e6d5965be9a9b60ce226dd82a3e3990d5c; expires=Tue, 01 May 2018 14:29:28 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "79b8b1e6d5965be9a9b60ce226dd82a3e3990d5c",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"GET_AVAILABLE_PAYMENT_SUCCESS\", \"message_data\": {\"bank_pay_list\": [{\"pkey\": \"5ad1b786e3f087650c2a8e2b\", \"name\": \"BANK_MANUAL_TRANS\", \"misc\": {\"bank_name\": \"BCA\", \"bank_image\": \"https://s3.amazonaws.com/merchant-dealoka/banner/merchant_banner_1523693446_65824.jpg\", \"bank_instruction\": \"1. Pilih menu Transfer\\r\\n2. Daftarkan rekening tujuan PT Sentral Gadai Kencana\\r\\n3. Transfer sesuai dengan jumlah yang disebutkan sampai dengan 3 digit terakhir\", \"bank_acc_num\": \"123456789\", \"bank_acc_name\": \"PT Sentral Gadai Kencana\"}, \"value\": \"66666666\", \"rec_timestamp\": 1523693446000, \"_id\": \"5ad1b786e3f087650c2a8e2b\", \"desc\": \"\"}, {\"pkey\": \"5ad1b7b6e3f087650c2a8e2c\", \"name\": \"BANK_MANUAL_TRANS\", \"misc\": {\"bank_name\": \"Mandiri\", \"bank_image\": \"https://s3.amazonaws.com/merchant-dealoka/banner/merchant_banner_1523693494_749432.jpg\", \"bank_instruction\": \"1) Pilih menu transfer\\r\\n2) Daftarkan rekening PT SGK\", \"bank_acc_num\": \"0987654321\", \"bank_acc_name\": \"PT SGK\"}, \"value\": \"88888888\", \"rec_timestamp\": 1523693494000, \"_id\": \"5ad1b7b6e3f087650c2a8e2c\", \"desc\": \"\"}, {\"pkey\": \"5ad1b801e3f087650c2a8e2d\", \"name\": \"BANK_MANUAL_TRANS\", \"misc\": {\"bank_name\": \"Niaga\", \"bank_image\": \"https://s3.amazonaws.com/merchant-dealoka/banner/merchant_banner_1523693569_713960.jpg\", \"bank_instruction\": \"1) Buka menu Transfer\", \"bank_acc_num\": \"09080909\", \"bank_acc_name\": \"PT SGK\"}, \"value\": \"09080909\", \"rec_timestamp\": 1523693569000, \"_id\": \"5ad1b801e3f087650c2a8e2d\", \"desc\": \"\"}], \"bank_pay_va_list\": []}, \"message_desc\": \"GET_AVAILABLE_PAYMENT_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			],
+			"rawModeData": ""
+		},
+		{
+			"id": "3e36db50-a206-fb67-08d7-57331bdacb8e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_deposit_duration",
+			"folder": "35993242-c29b-9b65-1c27-e523155ee999",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535021315570,
+			"name": "GET DEPOSIT DURATION",
+			"description": "this is api for getting how many deposit duration available",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "4286a659-62a3-7bba-b8c4-a42271e5031b",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_sell_gold",
+			"folder": "7e8933f7-b22d-c08b-5641-cdb019a292c3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "wallet_id",
+					"value": "581751983",
+					"type": "text"
+				},
+				{
+					"key": "customer_id",
+					"value": "64804458",
+					"type": "text"
+				},
+				{
+					"key": "weight",
+					"value": "0.2",
+					"type": "text"
+				},
+				{
+					"key": "pin",
+					"value": "123456",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c",
+					"sessionValue": "ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c",
+					"description": "wallet_id + customer_id + weight + pin",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847817619,
+			"name": "SELL GOLD",
+			"description": "This is API that execute gold sell",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "e1415bee-f9f9-4bb5-82e7-9826db2a82d0",
+						"description": "This is API that execute gold sell",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "wallet_id",
+								"value": "581751983",
+								"type": "text"
+							},
+							{
+								"key": "customer_id",
+								"value": "64804458",
+								"type": "text"
+							},
+							{
+								"key": "weight",
+								"value": "0.2",
+								"type": "text"
+							},
+							{
+								"key": "pin",
+								"value": "123456",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c",
+								"sessionValue": "ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c",
+								"description": "wallet_id + customer_id + weight + pin",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_sell_gold",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"e1415bee-f9f9-4bb5-82e7-9826db2a82d0\",\"description\":\"This is API that execute gold sell\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"wallet_id\",\"value\":\"581751983\",\"type\":\"text\"},{\"key\":\"customer_id\",\"value\":\"64804458\",\"type\":\"text\"},{\"key\":\"weight\",\"value\":\"0.2\",\"type\":\"text\"},{\"key\":\"pin\",\"value\":\"123456\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c\",\"sessionValue\":\"ba08bba17ef7bf784060ebdca32e9edc8f399e73e3e8a43c173ea4a62bd2b02c\",\"description\":\"wallet_id + customer_id + weight + pin\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_sell_gold\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "c264f465-cdde-4bb6-6ca6-763f39805903",
+					"name": "SELL GOLD",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Aug 2018 04:01:11 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=b7c0b08c1aab164b55e10af5c5afb59308b2d3b9; expires=Sat, 11 Aug 2018 05:01:11 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "preprod-mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "b7c0b08c1aab164b55e10af5c5afb59308b2d3b9",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_SELL_GOLD_SUCCESS\", \"message_desc\": \"Jual Emas Berhasil, Transaksi anda akan diproses paling lambat 2 hari kerja\", \"message_data\": {\"balance\": 127.44089999999998}, \"call_id\": \"API_CALL_153396007111111_2431376\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "65bb55a0-517e-7b66-dbc5-8c29ab1a2b73",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_deposit_checkout",
+			"folder": "45d44ff5-b02e-6b22-71e8-45f3f1c8d645",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "14673527",
+					"type": "text"
+				},
+				{
+					"key": "from_wallet_id",
+					"value": "589368617",
+					"type": "text"
+				},
+				{
+					"key": "to_wallet_id",
+					"value": "589368617",
+					"type": "text"
+				},
+				{
+					"key": "duration",
+					"value": "12",
+					"type": "text"
+				},
+				{
+					"key": "ext_type",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "amount",
+					"value": "60",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "ed850a56395815dae92e0535ae35699ac63bb15ae6080bcc7c173eebc7a10990",
+					"sessionValue": "ed850a56395815dae92e0535ae35699ac63bb15ae6080bcc7c173eebc7a10990",
+					"description": "customer_id + from_wallet_id + to _wallet_id + duration + ext_type + amount",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535092378344,
+			"name": "GOLD DEPOSIT CHECKOUT",
+			"description": "this is api for gold deposit checkout",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "70bd2c5b-1ad6-ac95-e604-baeda5f815f1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_transfer",
+			"folder": "ca04adfc-c526-7a9c-e80a-a87dbd8af0b7",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "to",
+					"value": "516529839",
+					"type": "text"
+				},
+				{
+					"key": "from",
+					"value": "574653739",
+					"type": "text"
+				},
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "amount",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "berita",
+					"value": "ini berita",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pin",
+					"value": "111111",
+					"type": "text"
+				},
+				{
+					"key": "add_fav",
+					"value": "",
+					"description": "ADD (OPTIONAL)",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "cca57b71e39b52b73bd2238648ce12c900146bc1f190ceabb487c60cbe9c8662",
+					"sessionValue": "cca57b71e39b52b73bd2238648ce12c900146bc1f190ceabb487c60cbe9c8662",
+					"description": "$customer_id . $wallet_id_to . $wallet_id_from . $amount . $berita . $pin",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535018020225,
+			"name": "USER TRANSFER",
+			"description": "this api for transfering gold to another user",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "81304875-2552-6f60-1fe7-310abef0c79f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_login",
+			"folder": "4cc6c846-12f3-cd8e-00e3-827f5240aec2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "kelvin@dealoka.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "passwOrd",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "2542da6cb4a1bc3b2ea2815c70e385b751c4db3b37719f0fdce33a7c9803ef13",
+					"description": "email + password",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847759725,
+			"name": "USER LOGIN",
+			"description": "this is API for user authentication",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "fdd754a1-ffa3-4746-b6e1-e6985b258901",
+						"description": "this is API for user authentication",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "email",
+								"value": "kelvin@dealoka.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "passwOrd",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "2542da6cb4a1bc3b2ea2815c70e385b751c4db3b37719f0fdce33a7c9803ef13",
+								"description": "email + password",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_login",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"fdd754a1-ffa3-4746-b6e1-e6985b258901\",\"description\":\"this is API for user authentication\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"email\",\"value\":\"kelvin@dealoka.com\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"passwOrd\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"2542da6cb4a1bc3b2ea2815c70e385b751c4db3b37719f0fdce33a7c9803ef13\",\"description\":\"email + password\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_login\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "1d2ea01a-ac84-35ae-26ec-2a071e1a01a5",
+					"name": "USER LOGIN ADJUSTED",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1453",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Aug 2018 14:23:03 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=bb668be2292d88cfcefe54dc41c9d91ad7b51b4a; expires=Thu, 09 Aug 2018 15:23:03 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "bb668be2292d88cfcefe54dc41c9d91ad7b51b4a",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_LOGIN_SUCCESS\", \"message_data\": {\"total\": 10.605400000000001, \"user_kyc_rec\": {\"bank_name\": \"Bank Central Asia\", \"fk_user_id\": \"5b5ac8ee90d2e949b23aab1c\", \"bank_accn_num\": \"123456\", \"ktp_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/KTP/KTP1532752198_160533.jpg\", \"npwp_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/NPWP/NPWP1532752221_678533.jpg\", \"bank_cus_name\": \"Kelvin\", \"ktp\": \"12345\", \"pkey\": \"5b5ac8ee90d2e949b23aab1d\", \"bank_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/BANK/BANK1532752209_856094.jpg\", \"rec_timestamp\": 1532676334000, \"fk_customer_id\": \"62960385\", \"_id\": \"5b5ac8ee90d2e949b23aab1d\", \"kyc_submitted\": \"NOT_SUBMITTED\", \"kyc_status\": \"VERIFIED\", \"npwp\": \"123456\"}, \"user_rec\": {\"city_home\": \"\", \"kyc_status\": \"FALSE\", \"reference\": \"\", \"address_post\": \"\", \"sex\": \"\", \"refcode\": \"Kelvin0616\", \"rec_timestamp\": 1532676334000, \"user_rank\": \"REGULAR\", \"upline_refcode\": \"\", \"pob\": \"\", \"mothers_name\": \"Test \", \"zip_code_home\": \"00000\", \"city_post\": \"\", \"address_home\": \"\", \"religion\": \"\", \"customer_id\": \"62960385\", \"zip_code_post\": \"00000\", \"pkey\": \"5b5ac8ee90d2e949b23aab1c\", \"user_type_status\": \"VERIFIED\", \"phone\": \"081219644314\", \"purpose\": \"\", \"accn_status\": \"ACTIVE\", \"ocupation\": \"\", \"salary\": \"\", \"name\": \"Kelvin\", \"level\": 2, \"dob\": \"06161996\", \"marital_status\": \"\", \"email\": \"kelvin@dealoka.com\", \"_id\": \"5b5ac8ee90d2e949b23aab1c\"}}, \"message_desc\": \"USER_LOGIN_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				},
+				{
+					"request": {
+						"id": "33d5bd01-4fa7-45d1-9b4b-92b7397515ff",
+						"description": "this is API for user authentication",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "email",
+								"value": "kelvin@dealoka.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "passwOrd",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "2542da6cb4a1bc3b2ea2815c70e385b751c4db3b37719f0fdce33a7c9803ef13",
+								"description": "email + password",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_login",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"33d5bd01-4fa7-45d1-9b4b-92b7397515ff\",\"description\":\"this is API for user authentication\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"email\",\"value\":\"kelvin@dealoka.com\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"passwOrd\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"2542da6cb4a1bc3b2ea2815c70e385b751c4db3b37719f0fdce33a7c9803ef13\",\"description\":\"email + password\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_login\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "dcd1e90d-9f22-bbc4-0b08-824906041adc",
+					"name": "USER LOGIN RESPONSE",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2876",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Apr 2018 00:59:10 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=86ff903fb9cdc2cfd51de1aecbc55c2c54722b79; expires=Thu, 26 Apr 2018 01:59:10 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "web-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "86ff903fb9cdc2cfd51de1aecbc55c2c54722b79",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_LOGIN_SUCCESS\", \"message_data\": {\"user_accn_list\": [{\"pkey\": \"5adc1976e3f0871cba18149f\", \"account_type\": \"LM\", \"fk_wallet_id\": \"516922241\", \"rec_timestamp\": 1524373878000, \"fk_customer_id\": \"61889558\", \"balance\": 25.89, \"account_level\": \"MAIN\"}, {\"pkey\": \"5adc1df2e3f08720775bf74a\", \"account_type\": \"LM\", \"fk_wallet_id\": \"539416486\", \"rec_timestamp\": 1524375026000, \"fk_customer_id\": \"61889558\", \"balance\": 7.0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5adc65a6e3f0872a284b91ed\", \"account_type\": \"LM\", \"fk_wallet_id\": \"558892527\", \"rec_timestamp\": 1524393382000, \"fk_customer_id\": \"61889558\", \"balance\": 6.0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5adca3afe3f0872fea7ff14e\", \"account_type\": \"LM\", \"fk_wallet_id\": \"593304997\", \"rec_timestamp\": 1524409263000, \"fk_customer_id\": \"61889558\", \"balance\": 1.0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5addd3bae3f087491e89bcc7\", \"account_type\": \"LM\", \"fk_wallet_id\": \"544618021\", \"rec_timestamp\": 1524487098000, \"fk_customer_id\": \"61889558\", \"balance\": 0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5adfe985e3f0876f4d0f3588\", \"account_type\": \"LM\", \"fk_wallet_id\": \"511802365\", \"rec_timestamp\": 1524623749000, \"fk_customer_id\": \"61889558\", \"balance\": 0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5adfea0ce3f0876f4d0f3589\", \"account_type\": \"LM\", \"fk_wallet_id\": \"546818373\", \"rec_timestamp\": 1524623884000, \"fk_customer_id\": \"61889558\", \"balance\": 0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5adfefbee3f0876f4d0f3592\", \"account_type\": \"LM\", \"fk_wallet_id\": \"515435147\", \"rec_timestamp\": 1524625342000, \"fk_customer_id\": \"61889558\", \"balance\": 0, \"account_level\": \"SUB_MAIN\"}, {\"pkey\": \"5ae03894e3f0877dac473606\", \"account_type\": \"LM\", \"fk_wallet_id\": \"578440119\", \"rec_timestamp\": 1524643988000, \"fk_customer_id\": \"61889558\", \"balance\": 0, \"account_level\": \"SUB_MAIN\"}], \"user_kyc_rec\": {\"bank_name\": \"BUKOPIN\", \"fk_user_id\": \"5adc1976e3f0871cba18149d\", \"bank_accn_num\": \"666666999\", \"ktp_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/KTP/KTP1524375175_436103.jpg\", \"npwp_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/NPWP/NPWP1524375172_66005.jpg\", \"bank_cus_name\": \"Sidnei A Budiman\", \"ktp\": \"321120299202\", \"pkey\": \"5adc1976e3f0871cba18149e\", \"bank_file_path\": \"https://s3.amazonaws.com/merchant-dealoka/BANK/BANK1524375173_373648.jpg\", \"rec_timestamp\": 1524373878000, \"fk_customer_id\": \"61889558\", \"_id\": \"5adc1976e3f0871cba18149e\", \"kyc_status\": \"PREMIUM\", \"npwp\": \"444555666777888999\"}, \"user_rec\": {\"pkey\": \"5adc1976e3f0871cba18149d\", \"customer_id\": \"61889558\", \"rec_timestamp\": 1524373878000, \"mothers_name\": \"Kurniawati\", \"dob\": \"06111995\", \"user_type_status\": \"PREMIUM\", \"phone\": \"082112082882\", \"kyc_status\": \"TRUE\", \"user_rank\": \"STANDARD\", \"accn_status\": \"ACTIVE\", \"_id\": \"5adc1976e3f0871cba18149d\", \"email\": \"sidneib@gmail.com\", \"name\": \"Sid B\"}}, \"message_desc\": \"USER_LOGIN_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "87d934d7-195e-3fd1-ad17-fc6e8b20f4ff",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_buy_gold",
+			"folder": "1b96b003-8bca-e7ae-155e-daea4c69a3c1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"description": "customer id",
+					"type": "text"
+				},
+				{
+					"key": "trans_key",
+					"value": "eyJpdiI6IkVvcVhnRFhwYlFUcGZwcjlQbkQxWEE9PSIsInZhbHVlIjoiRFhidkhUS1BacmJZTmp3M2FFT3IwUT09IiwibWFjIjoiYTAzM2MwZDE1YTMyMmFhOTI2MjM0NDE1NjJjMTZlYWU5Y2Y3ODliM2MxNWMyYTJkZTMyZDJmNjAzMWE2OTZjMSJ9",
+					"sessionValue": "5b6fd51ae3f0873651e870bd",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "33a637b7f6c703b132e2ec4e3b955caf1ac91d66138fd32827a332f93b7c2737",
+					"sessionValue": "dsds",
+					"description": "$customer_id . $trans_key;",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535014477384,
+			"name": "BUY GOLD",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "6da7545d-1382-406d-b816-a218bd0bfc37",
+						"description": "",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "wallet_id",
+								"value": "581751983",
+								"description": "wallet id",
+								"type": "text"
+							},
+							{
+								"key": "customer_id",
+								"value": "64804458",
+								"description": "customer id",
+								"type": "text"
+							},
+							{
+								"key": "weight",
+								"value": "1",
+								"description": "deposit amount",
+								"type": "text"
+							},
+							{
+								"key": "total_price",
+								"value": "653336",
+								"description": " total amount - unique_number",
+								"type": "text"
+							},
+							{
+								"key": "original_amount",
+								"value": "653916",
+								"description": "original cash amount",
+								"type": "text"
+							},
+							{
+								"key": "unique_num",
+								"value": "580",
+								"type": "text"
+							},
+							{
+								"key": "bank_accn_no",
+								"value": "123456789",
+								"type": "text"
+							},
+							{
+								"key": "bank_accn_nm",
+								"value": "PT Sentral Gadai Kencana",
+								"type": "text"
+							},
+							{
+								"key": "bank_name",
+								"value": "BCA",
+								"type": "text"
+							},
+							{
+								"key": "trans_key",
+								"value": "5b70c381e3f08742a238b466",
+								"sessionValue": "5b6fd51ae3f0873651e870bd",
+								"type": "text"
+							},
+							{
+								"key": "tax_total",
+								"value": "2916",
+								"sessionValue": "2916",
+								"type": "text"
+							},
+							{
+								"key": "payment_type",
+								"value": "MANUAL_TRANSFER",
+								"sessionValue": "MANUAL_TRANSFER",
+								"description": "VA_TRANSFER || MANUAL_TRANSFER",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "33a637b7f6c703b132e2ec4e3b955caf1ac91d66138fd32827a332f93b7c2737",
+								"sessionValue": "dsds",
+								"description": "wallet_id + customer_id + weight + total_price + original_amount + unique_num + bank_accn_no + trans_key + tax_total + payment_type",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_buy_gold",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"6da7545d-1382-406d-b816-a218bd0bfc37\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"wallet_id\",\"value\":\"581751983\",\"description\":\"wallet id\",\"type\":\"text\"},{\"key\":\"customer_id\",\"value\":\"64804458\",\"description\":\"customer id\",\"type\":\"text\"},{\"key\":\"weight\",\"value\":\"1\",\"description\":\"deposit amount\",\"type\":\"text\"},{\"key\":\"total_price\",\"value\":\"653336\",\"description\":\" total amount - unique_number\",\"type\":\"text\"},{\"key\":\"original_amount\",\"value\":\"653916\",\"description\":\"original cash amount\",\"type\":\"text\"},{\"key\":\"unique_num\",\"value\":\"580\",\"type\":\"text\"},{\"key\":\"bank_accn_no\",\"value\":\"123456789\",\"type\":\"text\"},{\"key\":\"bank_accn_nm\",\"value\":\"PT Sentral Gadai Kencana\",\"type\":\"text\"},{\"key\":\"bank_name\",\"value\":\"BCA\",\"type\":\"text\"},{\"key\":\"trans_key\",\"value\":\"5b70c381e3f08742a238b466\",\"sessionValue\":\"5b6fd51ae3f0873651e870bd\",\"type\":\"text\"},{\"key\":\"tax_total\",\"value\":\"2916\",\"sessionValue\":\"2916\",\"type\":\"text\"},{\"key\":\"payment_type\",\"value\":\"MANUAL_TRANSFER\",\"sessionValue\":\"MANUAL_TRANSFER\",\"description\":\"VA_TRANSFER || MANUAL_TRANSFER\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"33a637b7f6c703b132e2ec4e3b955caf1ac91d66138fd32827a332f93b7c2737\",\"sessionValue\":\"dsds\",\"description\":\"wallet_id + customer_id + weight + total_price + original_amount + unique_num + bank_accn_no + trans_key + tax_total + payment_type\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_buy_gold\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "4e0f499b-2c99-ceff-824e-7e5bc1c85a63",
+					"name": "BUY GOLD EXAMPLE",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "296",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 May 2018 14:25:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=45508f6f91213d1c964999c6adefeadaecb9b2fd; expires=Sun, 27 May 2018 15:25:49 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "45508f6f91213d1c964999c6adefeadaecb9b2fd",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_DEPOSIT_PREAPPROVAL_SUCCESS\", \"message_data\": {\"current_time\": 1527431149000, \"total_price\": 3531332.0, \"bank_info\": {\"bank_accn_no\": \"123456789\", \"bank_accn_nm\": \"PT Sentral Gadai Kencana\"}, \"pay_time\": 1527434749000}, \"message_desc\": \"USER_DEPOSIT_PREAPPROVAL_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "952b8627-d19a-00fd-ba48-98f5a62afca1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_transfer_checkout",
+			"folder": "7a2eeb51-2dac-87d8-1c9a-afb72acd3dab",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "to",
+					"value": "516529839",
+					"type": "text"
+				},
+				{
+					"key": "from",
+					"value": "574653739",
+					"type": "text"
+				},
+				{
+					"key": "amount",
+					"value": "0.1",
+					"type": "text"
+				},
+				{
+					"key": "berita",
+					"value": "ini berita",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "c6837ea5bfdcae8adaa9903aa7da992c5e945cf04ea564eb60a7ee6c32184530",
+					"sessionValue": "c6837ea5bfdcae8adaa9903aa7da992c5e945cf04ea564eb60a7ee6c32184530",
+					"description": "$customer_id . $wallet_id_to . $wallet_id_from . $amount . $berita",
+					"type": "text"
+				},
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535018002136,
+			"name": "USER TRANSFER CHECKOUT",
+			"description": "this is transfer checkout api",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "9bdaf100-3422-2665-545e-55a4df37a285",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_store_check",
+			"folder": "da4e1d05-a9df-3acd-778e-35707fcccd42",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847792131,
+			"name": "STORE STATUS",
+			"description": "this is api for checking store status whether the store open or closed",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "ea8e2b33-c087-45ef-8536-35c08f4f0d57",
+						"description": "this is api for checking store status whether the store open or closed",
+						"method": "GET",
+						"headers": "",
+						"dataMode": "raw",
+						"data": [],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_store_check",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"ea8e2b33-c087-45ef-8536-35c08f4f0d57\",\"description\":\"this is api for checking store status whether the store open or closed\",\"method\":\"GET\",\"headers\":\"\",\"dataMode\":\"raw\",\"data\":[],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_store_check\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "b321ee7e-5dd0-b965-f2fb-6f633c729681",
+					"name": "STORE STATUS OPEN",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jul 2018 04:24:19 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=11c7ad8e91da945a4cdaa58f9c8d66b46971b325; expires=Mon, 16 Jul 2018 05:24:19 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "11c7ad8e91da945a4cdaa58f9c8d66b46971b325",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"STORE_CHECK_SUCCESS\", \"message_data\": {\"store_status\": \"OPEN\"}, \"message_desc\": \"STORE_CHECK_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				},
+				{
+					"request": {
+						"id": "e3f3c3fe-e6d0-4493-9830-fde70af18184",
+						"description": "this is api for checking store status whether the store open or closed",
+						"method": "GET",
+						"headers": "",
+						"dataMode": "raw",
+						"data": [],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_store_check",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"e3f3c3fe-e6d0-4493-9830-fde70af18184\",\"description\":\"this is api for checking store status whether the store open or closed\",\"method\":\"GET\",\"headers\":\"\",\"dataMode\":\"raw\",\"data\":[],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_store_check\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "cf53d50a-b9f3-0b10-15ce-2bfeb6b49142",
+					"name": "STORE STATUS CLOSED",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Jul 2018 04:24:37 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=35ac71f218e6c18c9d9c98b82368798316992010; expires=Mon, 16 Jul 2018 05:24:37 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "35ac71f218e6c18c9d9c98b82368798316992010",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"STORE_CHECK_SUCCESS\", \"message_data\": {\"store_status\": \"CLOSED\"}, \"message_desc\": \"Mohon maaf, kami melayani transaksi hari Senin - Jumat pukul 09:00:00 - 17:00:00. Terima kasih untuk perhatiannya!\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			],
+			"rawModeData": ""
+		},
+		{
+			"id": "a6a433a4-ce0d-9675-5684-08bd016d828c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_register_verify_otp",
+			"folder": "e398de97-dc65-f737-6109-cf68fe73be1c",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "otp_code",
+					"value": "9297",
+					"type": "text"
+				},
+				{
+					"key": "otp_key",
+					"value": "d9f8343089da5cf1b605a34514d31b37",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "96deb6d60f708938cdc3387d9b1bbcc6",
+					"sessionValue": "2ac0bdfdf00af5451587b10e8bb95271a94fc6c8959e5d9952be3a68d3f8b62a",
+					"description": "otp_code;",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847748637,
+			"name": "REGISTER VERIFY OTP",
+			"description": "this is API for verify the otp that has been send at registration",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "0e9aadc5-e4d2-4980-8624-30576504195e",
+						"description": "this is API for verify the otp that has been send at registration",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "phone",
+								"value": "081219644314",
+								"type": "text"
+							},
+							{
+								"key": "otp_code",
+								"value": "9297",
+								"type": "text"
+							},
+							{
+								"key": "otp_key",
+								"value": "d9f8343089da5cf1b605a34514d31b37",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "96deb6d60f708938cdc3387d9b1bbcc6",
+								"sessionValue": "2ac0bdfdf00af5451587b10e8bb95271a94fc6c8959e5d9952be3a68d3f8b62a",
+								"description": "phone + otp_code",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_register_verify_otp",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"0e9aadc5-e4d2-4980-8624-30576504195e\",\"description\":\"this is API for verify the otp that has been send at registration\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"phone\",\"value\":\"081219644314\",\"type\":\"text\"},{\"key\":\"otp_code\",\"value\":\"9297\",\"type\":\"text\"},{\"key\":\"otp_key\",\"value\":\"d9f8343089da5cf1b605a34514d31b37\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"96deb6d60f708938cdc3387d9b1bbcc6\",\"sessionValue\":\"2ac0bdfdf00af5451587b10e8bb95271a94fc6c8959e5d9952be3a68d3f8b62a\",\"description\":\"phone + otp_code\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_register_verify_otp\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "9a139c73-0beb-e705-2c2b-e920fbff92fb",
+					"name": "REGISTER VERIFY OTP",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Aug 2018 23:43:44 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=6b78efc0aad44af655a64726762ea0af8fa33708; expires=Sat, 11 Aug 2018 00:43:44 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "6b78efc0aad44af655a64726762ea0af8fa33708",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_VERIFY_OTP_SUCCESS\", \"message_desc\": \"Kode OTP Berhasil diverifikasi\", \"message_data\": {\"phone\": \"081219644314\", \"otp_key\": \"96deb6d60f708938cdc3387d9b1bbcc6\"}, \"call_id\": \"API_CALL_153394462464344_7359394\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "b1483201-1685-6e36-31c1-dbfd0ebb7c57",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_frequent_transfer",
+			"folder": "7a2eeb51-2dac-87d8-1c9a-afb72acd3dab",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "09b75ab3b1a6b2ab598aa518526bddc4d67ed20d8766200151c4dcc2e7bce043",
+					"sessionValue": "09b75ab3b1a6b2ab598aa518526bddc4d67ed20d8766200151c4dcc2e7bce043",
+					"description": "customer_id",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535000539453,
+			"name": "SHOW FREQUENT TRANSFER",
+			"description": "this is API for displaying Saved Transfer Account",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "c3fb6582-94ca-a053-6f90-e8dd63ebf340",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_check_balance",
+			"folder": "da4e1d05-a9df-3acd-778e-35707fcccd42",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "wallet_id",
+					"value": "581751983",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "929894e5dec4c7b945a5f6b9005474616315cac6e71996b47d2b40008a793018",
+					"sessionValue": "1155aefc2ee6efb0a3a28d5a0ba62f9f51ed46f639561d8944e2a232f7972347",
+					"description": "wallet_id",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847776051,
+			"name": "CHECK BALANCE",
+			"description": "this is API for checking balance",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "22df3240-6d16-4399-b465-22d0f8f68b25",
+						"description": "this is API for checking balance",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "wallet_id",
+								"value": "581751983",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "929894e5dec4c7b945a5f6b9005474616315cac6e71996b47d2b40008a793018",
+								"sessionValue": "1155aefc2ee6efb0a3a28d5a0ba62f9f51ed46f639561d8944e2a232f7972347",
+								"description": "wallet_id",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_check_balance",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"22df3240-6d16-4399-b465-22d0f8f68b25\",\"description\":\"this is API for checking balance\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"wallet_id\",\"value\":\"581751983\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"929894e5dec4c7b945a5f6b9005474616315cac6e71996b47d2b40008a793018\",\"sessionValue\":\"1155aefc2ee6efb0a3a28d5a0ba62f9f51ed46f639561d8944e2a232f7972347\",\"description\":\"wallet_id\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_check_balance\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "08fe881c-9362-4d0e-319f-eeab5000e37d",
+					"name": "CHECK BALANCE",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Aug 2018 03:20:42 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=e567a9892bcb6c5d6c07431918004457ff4a243e; expires=Sat, 11 Aug 2018 04:20:42 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "preprod-mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "e567a9892bcb6c5d6c07431918004457ff4a243e",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"USER_CHECK_BALANCE_SUCCESS\", \"message_desc\": \"USER_CHECK_BALANCE_SUCCESS\", \"message_data\": {\"balance\": 127.64089999999999}, \"call_id\": \"API_CALL_1533957642102042_2839873\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "c67696a7-3397-5362-3fb5-7d1fb2d9ecef",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_buy_gold_checkout",
+			"folder": "1b96b003-8bca-e7ae-155e-daea4c69a3c1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "wallet_id",
+					"value": "574653739",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "depo_amount",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "type",
+					"value": "WEIGHT",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "token",
+					"value": "a44600e657a0a52bd7f992030ef713a2b7a7195147c3bd209023506f7d620b32",
+					"type": "text",
+					"enabled": true,
+					"description": "$customer_id . $wallet_id . $depo_amount . $type;"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "params",
+			"tests": "{\n    \"message_action\": \"BUY_GOLD_CHECKOUT_SUCCESS\",\n    \"message_desc\": \"BUY_GOLD_CHECKOUT_SUCCESS\",\n    \"message_data\": {\n        \"wallet_id\": \"574653739\", // NEW\n        \"customer_id\": \"51113386\", // NEW\n        \"total_price\": 569552,\n        \"tax_info\": {\n            \"tax_total\": 2552,\n            \"tax_rate\": \"0.45\",\n            \"kyc_status\": \"PREMIUM\"\n        },\n        \"materai_cost\": 0,\n        \"gold_info\": {\n            \"sell_price\": \"567000\",\n            \"buy_price\": \"564000\", // NEW\n            \"total\": 567000,\n            \"weight\": 1\n        },\n        \"trans_key\": \"eyJpdiI6IjIzdTZ5bFY5QWp4NWxvdk9hUlk1bUE9PSIsInZhbHVlIjoiUnkxVG9xakdZNDUxWVVhT2ozRDNWUT09IiwibWFjIjoiYzhhY2IwNTQ1YTNmYmI2YWEwNWM5MDRlZWVkMDg5MTY2OTZlM2YzNjA5ZDc2OGRlOGM5MGZkZGNhMzk0YTM3OCJ9\"\n    },\n    \"call_id\": 151\n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535020164893,
+			"name": "BUY GOLD CHECKOUT",
+			"description": "this is API for executing gold checkout",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "33ed642d-5412-47a1-a423-f1d329455536",
+						"description": "this is API for executing gold checkout",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "depo_amount",
+								"value": "1",
+								"description": "can be price or weight",
+								"type": "text"
+							},
+							{
+								"key": "wallet_id",
+								"value": "581751983",
+								"type": "text"
+							},
+							{
+								"key": "type",
+								"value": "WEIGHT",
+								"description": "WEIGHT / PRICE",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "a44600e657a0a52bd7f992030ef713a2b7a7195147c3bd209023506f7d620b32",
+								"sessionValue": "ddd918b3ad7580d9a3e84562ad58bfea9c0678e0ed0ec986fd83044ddfa80da0",
+								"description": "wallet_id + depo_amount + type",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_buy_gold_checkout",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"33ed642d-5412-47a1-a423-f1d329455536\",\"description\":\"this is API for executing gold checkout\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"depo_amount\",\"value\":\"1\",\"description\":\"can be price or weight\",\"type\":\"text\"},{\"key\":\"wallet_id\",\"value\":\"581751983\",\"type\":\"text\"},{\"key\":\"type\",\"value\":\"WEIGHT\",\"description\":\"WEIGHT / PRICE\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"a44600e657a0a52bd7f992030ef713a2b7a7195147c3bd209023506f7d620b32\",\"sessionValue\":\"ddd918b3ad7580d9a3e84562ad58bfea9c0678e0ed0ec986fd83044ddfa80da0\",\"description\":\"wallet_id + depo_amount + type\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_buy_gold_checkout\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "161aef55-5b33-d50f-83c6-3dd8c75ef2c3",
+					"name": "BUY GOLD CHECKOUT EXAMPLES",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 May 2018 14:27:15 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=8fcf73976168de677356dced5e1bd965c3d8b46f; expires=Tue, 29 May 2018 15:27:15 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "8fcf73976168de677356dced5e1bd965c3d8b46f",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"GOLD_CHECKOUT_SUCCESS\", \"message_data\": {\"tax_info\": {\"tax_total\": \"5400\", \"tax_rate\": 0.45, \"kyc_status\": \"PREMIUM\"}, \"total_price\": \"1205400\", \"gold_info\": {\"sell_price\": 400000.0, \"total\": \"1200000\", \"weight\": 3.0}}, \"message_desc\": \"GOLD_CHECKOUT_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "c93ed15c-a607-0c99-a899-b2b27399e6a8",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_gen_unique_code",
+			"folder": "1b96b003-8bca-e7ae-155e-daea4c69a3c1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "payment_type",
+					"value": "MANUAL_TRANSFER",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "payment_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "trans_key",
+					"value": "eyJpdiI6IjdFNEZFVGNrRmJGWTJZYWVKZWtBMFE9PSIsInZhbHVlIjoiaFQ5azZQVXBUR1htd1RJYlREYmloZz09IiwibWFjIjoiMTk5MjA0OWI1OTBiZDYxNGJjZWJmZDhjNzc1ODE3NzE4MmUzMjE4OGFlMDY1NGQ3ZTQxMWI0ODA5NGQ2YzVlYyJ9",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "token",
+					"value": "7b05ebd42b17bf305ba3f1ee0787efdc13bd95906bcd1a028fb29c5ad03721bb",
+					"type": "text",
+					"enabled": true,
+					"description": "$customer_id . $payment_type . $payment_id . $trans_key"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535020162178,
+			"name": "GENERATE UNIQUE CODE",
+			"description": "",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": []
+		},
+		{
+			"id": "c97e8f8c-8563-f571-aace-556d66809155",
+			"headers": "",
+			"headerData": [],
+			"url": "http://preprod-mobile-lakumas.dealoka.com/api_gold_deposit",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "65986700",
+					"type": "text"
+				},
+				{
+					"key": "from_wallet_id",
+					"value": "516908336",
+					"type": "text"
+				},
+				{
+					"key": "to_wallet_id",
+					"value": "516908336",
+					"type": "text"
+				},
+				{
+					"key": "duration",
+					"value": "12",
+					"type": "text"
+				},
+				{
+					"key": "interest",
+					"value": "2.5",
+					"type": "text"
+				},
+				{
+					"key": "ext_type",
+					"value": "NO_EXTENSION",
+					"type": "text"
+				},
+				{
+					"key": "amount",
+					"value": "60",
+					"type": "text"
+				},
+				{
+					"key": "pin",
+					"value": "111111",
+					"type": "text"
+				},
+				{
+					"key": "trans_key",
+					"value": "5b7fae91e3f0871307979b9a",
+					"sessionValue": "5b711b5ee3f0874a77d917af",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "15a5d36c28b6b79465938506158b7ea7c3b5a7f7bb6eb74c16a73ca2f2bd1cbf",
+					"sessionValue": "15a5d36c28b6b79465938506158b7ea7c3b5a7f7bb6eb74c16a73ca2f2bd1cbf",
+					"description": "customer_id + from_wallet_id + to _wallet_id + duration + interest + ext_type + amount  + pin  + trans_key",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"name": "GOLD DEPOSIT",
+			"description": "this is api for gold deposit",
+			"descriptionFormat": "html",
+			"time": 1535095490815,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "35993242-c29b-9b65-1c27-e523155ee999"
+		},
+		{
+			"id": "cebdbc75-1b79-da0c-1c8c-52d9d6994a7c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_current_price",
+			"folder": "da4e1d05-a9df-3acd-778e-35707fcccd42",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1534847784683,
+			"name": "GET GOLD PRICE",
+			"description": "this is API for get current buy and sell gold price",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "d3110ca8-6dd4-4520-8af3-ded2c5cee2d5",
+						"description": "this is API for get current buy and sell gold price",
+						"method": "GET",
+						"headers": "",
+						"dataMode": "raw",
+						"data": [],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_get_current_price",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"d3110ca8-6dd4-4520-8af3-ded2c5cee2d5\",\"description\":\"this is API for get current buy and sell gold price\",\"method\":\"GET\",\"headers\":\"\",\"dataMode\":\"raw\",\"data\":[],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_get_current_price\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "3deca0c4-f830-0055-64eb-d7352b15ae80",
+					"name": "GET GOLD PRICE EXAMPLE",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "141",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 May 2018 10:52:06 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=15de16184a4acdc057cbfad0849df6e2f74d9585; expires=Tue, 01 May 2018 11:52:06 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "15de16184a4acdc057cbfad0849df6e2f74d9585",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"GET_GOLD_PRICE_SUCCESS\", \"message_data\": {\"sell\": \"607,000\", \"buy\": \"601,000\"}, \"message_desc\": \"GET_GOLD_PRICE_SUCCESS\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			],
+			"rawModeData": ""
+		},
+		{
+			"id": "e39a23c6-a753-532e-e346-8cc37b2ec3a0",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_get_deposit_interest",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"data": [
+				{
+					"key": "customer_id",
+					"value": "51113386",
+					"type": "text"
+				},
+				{
+					"key": "duration",
+					"value": "12",
+					"type": "text"
+				},
+				{
+					"key": "amount",
+					"value": "60",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "ed850a56395815dae92e0535ae35699ac63bb15ae6080bcc7c173eebc7a10990",
+					"description": "customer_id + duration + amount",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "GET DEPOSIT INTEREST",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1535080345734,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "35993242-c29b-9b65-1c27-e523155ee999"
+		},
+		{
+			"id": "ebd225f6-ef45-5216-812e-eba008884ace",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api_user_register",
+			"folder": "e398de97-dc65-f737-6109-cf68fe73be1c",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "kelvin",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "081296913648",
+					"type": "text"
+				},
+				{
+					"key": "dob",
+					"value": "06/16/1996",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "hahaha@dealoka.com",
+					"type": "text"
+				},
+				{
+					"key": "confirm_email",
+					"value": "hahaha@dealoka.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "confirm_password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pin",
+					"value": "123456",
+					"type": "text"
+				},
+				{
+					"key": "confirm_pin",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "mothers_name",
+					"value": "Test",
+					"type": "text"
+				},
+				{
+					"key": "referral",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "h2h_label",
+					"value": "DEALOKA",
+					"sessionValue": "DEALOKA",
+					"type": "text"
+				},
+				{
+					"key": "dlk_code",
+					"value": "DLK_123456_ID",
+					"sessionValue": "DLK_123456_ID",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "57d40f2500d03d02a6e67efde70b7feb3aebed87746cb9bf1fef2d780398d3fc",
+					"sessionValue": "13fa7fb89de57da15d7ccd5f47a3361ce3e29c3bacc35e87d2db9a0dbf0f5efa",
+					"description": "$name . $handphone . $dob . $email . $confirm_email . $password . $confirm_password . $pin . $confirm_pin . $mothers_name . $referral",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1535011037931,
+			"name": "USER REGISTRATION",
+			"description": "this is API for user registration",
+			"collectionId": "08472c2e-991d-b369-360d-318c85e40adf",
+			"responses": [
+				{
+					"request": {
+						"id": "610fbf09-8595-43db-adb6-b014ed3ba60b",
+						"description": "this is API for user registration",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "name",
+								"value": "kelvin",
+								"type": "text"
+							},
+							{
+								"key": "phone",
+								"value": "081219644314",
+								"type": "text"
+							},
+							{
+								"key": "dob",
+								"value": "06/16/1996",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "hehe@dealoka.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "pin",
+								"value": "123456",
+								"type": "text"
+							},
+							{
+								"key": "mothers_name",
+								"value": "Test",
+								"type": "text"
+							},
+							{
+								"key": "referral",
+								"value": "sidnei0611",
+								"type": "text"
+							},
+							{
+								"key": "h2h_label",
+								"value": "DEALOKA",
+								"sessionValue": "DEALOKA",
+								"type": "text"
+							},
+							{
+								"key": "dlk_code",
+								"value": "DLK_123456_ID",
+								"sessionValue": "DLK_123456_ID",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "57d40f2500d03d02a6e67efde70b7feb3aebed87746cb9bf1fef2d780398d3fc",
+								"sessionValue": "13fa7fb89de57da15d7ccd5f47a3361ce3e29c3bacc35e87d2db9a0dbf0f5efa",
+								"description": "name + phone + dob + email + password +  pin + mothers_name + referral",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "http://preprod-mobile-lakumas.dealoka.com/api_user_register",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"requestObject": "{\"id\":\"610fbf09-8595-43db-adb6-b014ed3ba60b\",\"description\":\"this is API for user registration\",\"method\":\"POST\",\"headers\":\"\",\"dataMode\":\"params\",\"data\":[{\"key\":\"name\",\"value\":\"kelvin\",\"type\":\"text\"},{\"key\":\"phone\",\"value\":\"081219644314\",\"type\":\"text\"},{\"key\":\"dob\",\"value\":\"06/16/1996\",\"type\":\"text\"},{\"key\":\"email\",\"value\":\"hehe@dealoka.com\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"pin\",\"value\":\"123456\",\"type\":\"text\"},{\"key\":\"mothers_name\",\"value\":\"Test\",\"type\":\"text\"},{\"key\":\"referral\",\"value\":\"sidnei0611\",\"type\":\"text\"},{\"key\":\"h2h_label\",\"value\":\"DEALOKA\",\"sessionValue\":\"DEALOKA\",\"type\":\"text\"},{\"key\":\"dlk_code\",\"value\":\"DLK_123456_ID\",\"sessionValue\":\"DLK_123456_ID\",\"type\":\"text\"},{\"key\":\"token\",\"value\":\"57d40f2500d03d02a6e67efde70b7feb3aebed87746cb9bf1fef2d780398d3fc\",\"sessionValue\":\"13fa7fb89de57da15d7ccd5f47a3361ce3e29c3bacc35e87d2db9a0dbf0f5efa\",\"description\":\"name + phone + dob + email + password +  pin + mothers_name + referral\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"http://preprod-mobile-lakumas.dealoka.com/api_user_register\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[]}",
+					"id": "21747933-c25c-2e88-c10f-4dec177583c2",
+					"name": "USER REGISTRATION",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "html",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1137",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Aug 2018 01:30:04 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "CherryPy/10.2.1",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session_id=63986c872c5b27ccae527229a59d119bd41735c8; expires=Sat, 11 Aug 2018 02:30:04 GMT; Max-Age=3600; Path=/",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						}
+					],
+					"cookies": [
+						{
+							"expirationDate": "Invalid Date",
+							"httpOnly": false,
+							"domain": "preprod-mobile-lakumas.dealoka.com",
+							"path": "/",
+							"secure": false,
+							"value": "63986c872c5b27ccae527229a59d119bd41735c8",
+							"name": "session_id"
+						}
+					],
+					"text": "{\"message_action\": \"REGISTER_USER_SUCCESS\", \"message_desc\": \"REGISTER_USER_SUCCESS\", \"message_data\": {\"total\": 0.1, \"user_kyc_rec\": {\"bank_name\": \"NA\", \"fk_user_id\": \"5b6e3c1ce3f0871e21aabcbb\", \"bank_accn_num\": \"NA\", \"ktp_file_path\": \"NA\", \"npwp_file_path\": \"NA\", \"bank_cus_name\": \"NA\", \"ktp\": \"NA\", \"bank_file_path\": \"NA\", \"rec_timestamp\": 1533951004000, \"fk_customer_id\": \"65549774\", \"kyc_submitted\": \"NOT_SUBMITTED\", \"kyc_status\": \"NA\", \"npwp\": \"NA\"}, \"user_rec\": {\"city_home\": \"\", \"kyc_status\": \"FALSE\", \"reference\": \"\", \"address_post\": \"\", \"sex\": \"\", \"refcode\": \"kelvin9616\", \"rec_timestamp\": 1533951004000, \"user_rank\": \"REGULAR\", \"upline_refcode\": \"sidnei0611\", \"pob\": \"\", \"mothers_name\": \"Test\", \"zip_code_home\": \"00000\", \"city_post\": \"\", \"address_home\": \"\", \"religion\": \"\", \"customer_id\": \"65549774\", \"zip_code_post\": \"00000\", \"pkey\": \"5b6e3c1ce3f0871e21aabcbb\", \"user_type_status\": \"UNVERIFIED\", \"phone\": \"081219644314\", \"purpose\": \"\", \"accn_status\": \"ACTIVE\", \"ocupation\": \"\", \"salary\": \"\", \"name\": \"kelvin\", \"dob\": \"06161996\", \"marital_status\": \"\", \"email\": \"hehe@dealoka.com\"}}, \"call_id\": \"API_CALL_15339510048304_4820928\"}",
+					"rawDataType": "text",
+					"owner": "4288534",
+					"write": true
+				}
+			]
+		}
+	]
+}
