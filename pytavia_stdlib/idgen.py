@@ -39,9 +39,20 @@ def _get_req_id():
         update   = { "$inc" : {"req_id" : 1}}
     )
     now_time     = int(time.time())
-    req_id       = int(request_rec["req_id"])
+    req_id       = int(request_rec["req_id"]) + 100000000000
     return str(req_id)
 # end def
+
+def _get_alpha_req_id():
+    request_rec = wmsDB.db_request_id.find_and_modify(
+        query    = {},
+        update   = { "$inc" : {"req_id" : 1}}
+    )
+    now_time     = int(time.time())
+    req_id       = int(request_rec["req_id"]) + 1000000
+    return  str(req_id)
+# end def
+
 
 def _get_token_gen():
     token_trx_rec = wmsDB.db_token_trx_id.find_and_modify(
@@ -53,25 +64,25 @@ def _get_token_gen():
 # end def
 
 def _get_code_gen():
-    code_trx_rec = wmsDB.db_code_trx_id.find_and_modify(
+    token_trx_rec = wmsDB.db_code_trx_id.find_and_modify(
         query    = {},
         update   = { "$inc" : {"code_counter" : 1}}
     )
     code_counter = int(token_trx_rec["code_counter"])
     byte1 = ''.join([
-        random.choice(string.ascii_letters + string.digits) for n in xrange(7)
+        random.choice(string.ascii_letters + string.digits) for n in range(7)
     ])
     byte2 = ''.join([
-        random.choice(string.ascii_letters + string.digits) for n in xrange(7)
+        random.choice(string.ascii_letters + string.digits) for n in range(7)
     ])
     byte3 = ''.join([
-        random.choice(string.ascii_letters + string.digits) for n in xrange(7)
+        random.choice(string.ascii_letters + string.digits) for n in range(7)
     ])
     byte4 = ''.join([
-        random.choice(string.ascii_letters + string.digits) for n in xrange(7)
+        random.choice(string.ascii_letters + string.digits) for n in range(7)
     ])
-    issued_code = byte1 + code_counter + byte2 + code_counter + byte3 +\
-                code_counter + byte4
+    issued_code = byte1 + str(code_counter) + byte2 + str(code_counter) + byte3 +\
+                str(code_counter) + byte4
     if code_counter >= 9:
         wmsDB.db_code_trx_id.update(
             {},{"$set":{"code_counter":0}}

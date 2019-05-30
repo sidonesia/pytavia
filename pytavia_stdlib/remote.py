@@ -1,9 +1,37 @@
 import json
 import urllib
-import urllib2
 import ssl
 import requests
+import sys
 
+def call_wms(params):
+
+    print( "-----------------------" , file=sys.stderr)
+    print( params , file=sys.stderr)
+    print( "-----------------------" , file=sys.stderr)
+
+    route           = params["route"]
+    params          = params["param"]
+    host            = "wms-lb-v1"
+    scheme          = "http://"
+
+    params["token"    ] = "5f28b739bd6a225ea84dcdf8a36db8efd6966fb75b5cd0e6197932bc94d418d7"
+    params["h2h_label"] = "DEALOKA"
+    params["dlk_code" ] = "DLK_123456_ID"
+
+    uri_string      = urllib.parse.urlencode(params)
+    call_url        = host + "/" + route + "?" + uri_string
+
+    call_url_final  = scheme + call_url
+    print( "-----------------------" , file=sys.stderr)
+    print( call_url_final , file=sys.stderr)
+    print( "-----------------------" , file=sys.stderr)
+
+    response        = urllib.request.urlopen( call_url_final )
+    response_string = response.read()
+    json_resp       = json.loads( response_string )
+    return json_resp
+#end def
 
 def call(params):
     scheme          = params["scheme"]
@@ -28,8 +56,6 @@ def call_rmt(params):
     request_obj = None
     if http_method == "POST":
         call_url        = scheme + "://" + host + route
-        print call_url
-        print data
         request_obj     = urllib2.Request(
                 call_url, data=json.dumps(data)
         )
@@ -75,19 +101,15 @@ def call_rmt(params):
 #end def
 
 def call_req(params):
-    http_method = params["method" ]
     scheme      = params["scheme" ]
     host        = params["host"   ]
     route       = params["route"  ]
     data        = params["param"  ]
-    headers     = params["headers"]
     req_message = requests.post(
         scheme + "://" + host + route,
-        data=data,
-        headers=headers
+        data=data
     )
-    print req_message.status_code
-    print req_message.text
-    return req_message
+    resp_json = json.loads(req_message.text)
+    return resp_json
 # end def
 

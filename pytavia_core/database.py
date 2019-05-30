@@ -46,8 +46,33 @@ def get_db_conn(db_conn):
 def get_record(db_table):
     timestamp = int(time.time()) * 1000
     record    = db[db_table]
-    record["rec_timestamp"] = timestamp
-    record["_id"]           = ObjectId()
-    record["pkey"]          = str( record["_id"] )
+    record["rec_timestamp"    ] = timestamp
+    record["rec_timestamp_str"] = time.strftime(
+        '%Y-%m-%d %H:%M:%S', time.localtime(int(time.time()))
+    )
+    record["_id" ] = ObjectId()
+    record["pkey"] = str( record["_id"] )
     return copy.deepcopy( record )
 #end def
+
+def new(db_handle, db_table):
+    timestamp = int(time.time()) * 1000
+    record    = db[db_table]
+    record["__db__name__"     ] = db_table
+    record["rec_timestamp"    ] = timestamp
+    record["rec_timestamp_str"] = time.strftime(
+        '%Y-%m-%d %H:%M:%S', time.localtime(int(time.time()))
+    )
+    record["_id"  ] = ObjectId()
+    record["pkey" ] = str( record["_id"] )
+    mongo_record_model      = model.mongo_model( record , record , db_handle )
+    return  mongo_record_model 
+#end def
+
+def load(db_handle, db_table):
+    record                  = db[db_table]
+    record["__db__name__" ] = db_table
+    mongo_record_model      = model.mongo_model( {} , record , db_handle )
+    return mongo_record_model
+#end def
+#
