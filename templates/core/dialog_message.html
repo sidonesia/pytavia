@@ -1,0 +1,36 @@
+{% set messages  = get_flashed_messages(with_categories=true) %}
+{% set msg_exist = "NO" %}
+{% set msg_data  = {"title" : "" , "desc" : ""} %}
+{% if messages %}        
+    {% set msg_exist = "YES" %}
+    {% for category, message in messages %}
+        {% if category == "title" %}
+            {% if msg_data.update({'title': message}) %}{% endif %}
+        {% endif %}
+        {% if msg_data.update({'desc': message}) %}{% endif %}
+    {% endfor %}
+{% endif %}
+
+<input type="hidden" id="msg_exist" value="{{ msg_exist }}" />
+<div class="modal fade" id="dialog_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-mpos-bca"  role="document">
+            <div class="modal-content">
+                    <div class="modal-header modal-header-mpos-bca">
+                            <h4 class="modal-title modal-title-mpos-bca" id="msg_title">{{ msg_data.title }}</h4>
+                    </div>
+                    <div class="modal-body">
+                            <center>
+                                    <label class="label-form-mpos-bca" id="msg_desc">
+                                            {{ msg_data.desc }}
+                                    </label>
+                            </center>
+                    </div>
+                    <div class="modal-footer modal-footer-mpos-bca">
+                            <span style="left:0;width:50%;">Halo BCA 1500888</span>
+                            <span style="text-align:right;right:0;width:50%;"> 2018 &copy; MPOS</span>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
