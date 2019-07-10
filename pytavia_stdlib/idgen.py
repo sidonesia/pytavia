@@ -7,8 +7,6 @@ import string
 from pytavia_core import config
 from pytavia_core import database
 
-wmsDB = database.get_db_conn( config.mainDB )
-
 def _get_api_call_id():
     now_time     = int(time.time())
     current_date = datetime.datetime.now()

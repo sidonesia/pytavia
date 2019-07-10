@@ -9,9 +9,7 @@ import base64
 import requests 
 import json
 
-sys.path.append("pytavia_modules/security" )
 
-from security     import security_proc
 from pytavia_core import config
 from pytavia_core import database
 from flask import Flask
