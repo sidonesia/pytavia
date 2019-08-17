@@ -22,7 +22,7 @@ G_STATIC_URL_PATH           = "/static"
 G_UPLOAD_PATH               = G_HOME_PATH + G_STATIC_URL_PATH + "/upload"
 G_UPLOAD_URL_PATH           = G_STATIC_URL_PATH + "/upload"
 
-mainDB                      = "credit-scoring-DB"
+mainDB                      = "cc-credit-scoring-DB-2"
 mongo_main_db_report_string = "mongodb://127.0.0.1:27017/" + mainDB
 
 # This is where we have all the databases we want to connect to
