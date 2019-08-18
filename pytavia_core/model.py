@@ -52,12 +52,17 @@ class mongo_model:
 #
 
 db = {
-    "db_card_register"              : {
-        "fk_user_id"                : "",
-        "fk_wallet_id"              : "",
-        "card_payment_gateway"      : "",
-        "response_data"             : "",
-        "initial_amount"            : 0 ,
-        "unique_hash"               : ""
-    }
+    # SYSTEM TABLES WITH _sys_, do not modify
+    "db_sys_resume_history"         : {
+        "resume_token"              : {},
+        "handler_name"              : "",
+        "collection"                : "",
+        "operation_type"            : "",
+        "database"                  : "",
+        "document_key"              : "",
+        "cluster_time"              : 0 ,
+        "rec_timestamp"             : "",
+    },
+
+    # USER TABLES BELOW HERE, MODIFYABLE
 }

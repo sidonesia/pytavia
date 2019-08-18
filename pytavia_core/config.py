@@ -22,11 +22,24 @@ G_STATIC_URL_PATH           = "/static"
 G_UPLOAD_PATH               = G_HOME_PATH + G_STATIC_URL_PATH + "/upload"
 G_UPLOAD_URL_PATH           = G_STATIC_URL_PATH + "/upload"
 
+# CORE DATABASES DO NOT MODIFY
+
+pytavia_dispatchDB  = "pytavia_dispatchDB"
+pytavia_dispatch    = "mongodb://127.0.0.1:27017/" + pytavia_dispatchDB
+
+###################### USER DATABASES BELOW HERE (MODIFYABLE) 
+
+
 mainDB                      = "cc-credit-scoring-DB-2"
 mongo_main_db_report_string = "mongodb://127.0.0.1:27017/" + mainDB
 
 # This is where we have all the databases we want to connect to
 G_DATABASE_CONNECT  = [
-    {"dbname" : mainDB , "dbstring" : mongo_main_db_report_string },
+    {"dbname" : pytavia_dispatchDB , "dbstring" : pytavia_dispatch },
+
+    # USER DATABASES MODIFY BELOW
+    {"dbname" : mainDB , "dbstring" : mongo_main_db_report_string  },
 ]
 
+G_RANDOM_START = 1000000
+G_RANDOM_END   = 9999999

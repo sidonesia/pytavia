@@ -11,10 +11,16 @@ sys.path.append("pytavia_stdlib"  )
 sys.path.append("pytavia_storage" )
 sys.path.append("pytavia_modules" )
 
-class update_init_event_handler:
+from pytavia_core import database
+from pytavia_core import config
+from pytavia_core import pytavia_event_handler
 
-    def __init__(self):
-        pass
+class update_init_event_handler(pytavia_event_handler.pytavia_event_handler):
+
+    mgdDB = database.get_db_conn(config.mainDB)
+
+    def __init__(self, params):
+        pytavia_event_handler.pytavia_event_handler.__init__(self,params)
     # end def
 
     """
@@ -23,7 +29,7 @@ class update_init_event_handler:
             updated
     """
     def event_switch(self, event):
-        print ( "update_init_event_handler(): ")
+        pytavia_event_handler.pytavia_event_handler.event_switch( self, event)
     # end def
 
 # end class

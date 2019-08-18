@@ -5,6 +5,7 @@ import os
 import sys
 import model
 import config
+import random
 
 from bson.objectid import ObjectId
 
@@ -63,8 +64,14 @@ def new(db_handle, db_table):
     record["rec_timestamp_str"] = time.strftime(
         '%Y-%m-%d %H:%M:%S', time.localtime(int(time.time()))
     )
-    record["_id"  ] = ObjectId()
-    record["pkey" ] = str( record["_id"] )
+
+    now_time        = int(time.time() * 1000)
+    random_int      = random.randint( config.G_RANDOM_START , config.G_RANDOM_END )
+
+    _id = ObjectId()
+    record["ipkey"] = str( _id )
+    record["pkey" ] = str( _id ) + "-" + str(now_time) + "-" + str(random_int)
+
     mongo_record_model      = model.mongo_model( record , record , db_handle )
     return  mongo_record_model 
 #end def

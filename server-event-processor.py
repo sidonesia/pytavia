@@ -21,6 +21,7 @@ from pytavia_stdlib      import idgen
 
 from init_proc           import init_event_handler
 from init_proc           import update_init_event_handler
+from init_proc           import error_init_event_handler
 from event_loop_executor import event_loop_proc
 
 
@@ -35,22 +36,30 @@ class server_event_handler(pytavia_events.pytavia_events):
         self.register_handler({
             "handler_name" : "BASIC_DB_INIT_HANDLER",
             "collection"   : "db_init",
-            "handler"      : init_event_handler.init_event_handler(),
+            "handler"      : init_event_handler.init_event_handler({}),
             "query_filter" : []
         })
         self.register_handler({
             "handler_name" : "UPDATE_BASIC_DB_INIT_HANDLER",
             "collection"   : "db_init",
-            "handler"      : update_init_event_handler.update_init_event_handler(),
+            "handler"      : update_init_event_handler.update_init_event_handler({}),
             "query_filter" : []
         })
+        """
+        self.register_handler({
+            "handler_name" : "ERROR_BASIC_DB_INIT_HANDLER",
+            "collection"   : "db_init",
+            "handler"      : error_init_event_handler.error_init_event_handler({}),
+            "query_filter" : []
+        })
+        """
         # ..... add all other event handlers here 
     # end def
 
     def start(self, params):
         self.event_loop({
             "event_loop_wait"    : 60,
-            "event_loop_execute" : event_loop_proc.event_loop_proc()
+            "event_loop_execute" : event_loop_proc.event_loop_proc({})
         })
     # end 
 
