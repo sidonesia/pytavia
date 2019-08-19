@@ -65,4 +65,16 @@ db = {
     },
 
     # USER TABLES BELOW HERE, MODIFYABLE
+
+    "db_application_sys_log"          : {
+        "fk_app_id"                   : "",
+        "fk_user_id"                  : "",
+        "fk_app_user_id"              : "",
+        "status"                      : "",
+        "status_timestamp"            : "",
+        "updated_by"                  : "", 
+        "pkey"                        : "",
+        "misc"                        : {},
+    },
+
 }

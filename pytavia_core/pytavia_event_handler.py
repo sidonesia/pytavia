@@ -22,7 +22,7 @@ class pytavia_event_handler:
         print (
             "[event_switch - " + handler_name + " - "+ str(current_time) + "] [" +\
                 operation_type + "] [" + database_name + "] [" + collection_name +\
-                "] [" + document_key + "]"
+                "] [" + str(document_key) + "]"
         )
         sys.stdout.flush()
         sys.stderr.flush()

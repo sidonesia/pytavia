@@ -12,6 +12,7 @@ sys.path.append("pytavia_storage" )
 sys.path.append("pytavia_modules" )
 sys.path.append("pytavia_modules/init_proc" )
 sys.path.append("pytavia_modules/event_loop_executor" )
+sys.path.append("pytavia_modules/queue_workflow_process" )
 
 from pytavia_stdlib      import utils
 from pytavia_core        import database
@@ -19,10 +20,8 @@ from pytavia_core        import config
 from pytavia_core        import pytavia_events
 from pytavia_stdlib      import idgen
 
-from init_proc           import init_event_handler
-from init_proc           import update_init_event_handler
-from init_proc           import error_init_event_handler
-from event_loop_executor import event_loop_proc
+from queue_workflow_process import customer_evt_handler
+from event_loop_executor    import event_loop_proc
 
 
 class server_event_handler(pytavia_events.pytavia_events):
@@ -34,26 +33,11 @@ class server_event_handler(pytavia_events.pytavia_events):
 
     def register_handlers(self, params):
         self.register_handler({
-            "handler_name" : "BASIC_DB_INIT_HANDLER",
-            "collection"   : "db_init",
-            "handler"      : init_event_handler.init_event_handler({}),
+            "handler_name" : "INSERT_DB_QUEUE_WORKFLOW_PROCESS",
+            "collection"   : "db_queue_workflow_process",
+            "handler"      : customer_evt_handler.customer_evt_handler({}),
             "query_filter" : []
         })
-        self.register_handler({
-            "handler_name" : "UPDATE_BASIC_DB_INIT_HANDLER",
-            "collection"   : "db_init",
-            "handler"      : update_init_event_handler.update_init_event_handler({}),
-            "query_filter" : []
-        })
-        """
-        self.register_handler({
-            "handler_name" : "ERROR_BASIC_DB_INIT_HANDLER",
-            "collection"   : "db_init",
-            "handler"      : error_init_event_handler.error_init_event_handler({}),
-            "query_filter" : []
-        })
-        """
-        # ..... add all other event handlers here 
     # end def
 
     def start(self, params):

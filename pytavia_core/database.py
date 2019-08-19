@@ -32,6 +32,10 @@ def connect_db():
     db_conn_completed = True
 #end def
 
+def get_database(database_name):
+    return db_active_con[database_name]
+# end def
+
 def get_db_conn(db_conn):
     # make sure we are connected to the database
     if not db_conn_completed:

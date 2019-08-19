@@ -11,20 +11,6 @@ import database
 import config
 import msg_event
 
-"""
-    Remaining questions
-        1) DONE - how do we not miss events if the process is down and a request comes in 
-        2) DONE - how do we sync the data with another database if the database went down
-        3) DONE - check all event types and build a common event format for use within 
-            DONE - pytavia framework
-        4) DONE - create a parent class for the event loop
-        5) DONE - make sure all child classes have all required functions
-        6) have a shutdown function from another script
-            - stops threads
-            - stops the while loop
-            - exists nicely
-"""
-
 class event_proc(threading.Thread):
 
     mgdDB          = database.get_db_conn(config.mainDB)
@@ -103,78 +89,13 @@ class event_proc(threading.Thread):
         self.g_event_loop = params["event_loop_status"]
     # end def
 
-    """
-        UPDATE ::::
-        {  
-            '_id':{  
-                '_data':'825D58DE1A0000000129295A1004EE340216054B4F80A501ED2E9F4D32C746645F696400645D580DD8192CBEF8DA78E63A0004'
-            },
-            'operationType':'update',
-            'clusterTime':Timestamp(1566105114, 1   ),
-            'ns':{  
-                'db':'cc-credit-scoring-DB-2',
-                'coll':'db_init'
-            },
-            'documentKey':{  
-                '_id':ObjectId('5d580dd8192cbef8da78e63a')
-            },
-            'updateDescription':{  
-                'updatedFields':{  
-                    'version':'1.9'
-                },
-                'removedFields':[  
-
-                ]
-            },
-            'handler_name':'BASIC_DB_INIT_HANDLER'
-        }
-
-        REMOVE ::::
-        {  
-            '_id':{  
-                '_data':'825D58DE830000000129295A1004EE340216054B4F80A501ED2E9F4D32C746645F696400645D580DD8192CBEF8DA78E63A0004'
-            },
-            'operationType':'delete',
-            'clusterTime':Timestamp(1566105219, 1   ),
-            'ns':{  
-                'db':'cc-credit-scoring-DB-2',
-                'coll':'db_init'
-            },
-            'documentKey':{  
-                '_id':ObjectId('5d580dd8192cbef8da78e63a')
-            },
-            'handler_name':'BASIC_DB_INIT_HANDLER'
-        }
-
-        INSERT ::::
-        {  
-            '_id':{  
-                '_data':'825D58DEEE0000000129295A1004EE340216054B4F80A501ED2E9F4D32C746645F696400645D58DEEE085EE1943318532B0004'
-            },
-            'operationType':'insert',
-            'clusterTime':Timestamp(1566105326, 1   ),
-            'fullDocument':{  
-                '_id':ObjectId('5d58deee085ee1943318532b'),
-                'version':'1.2'
-            },
-            'ns':{  
-                'db':'cc-credit-scoring-DB-2',
-                'coll':'db_init'
-            },
-            'documentKey':{  
-                '_id':ObjectId('5d58deee085ee1943318532b')
-            },
-            'handler_name':'UPDATE_BASIC_DB_INIT_HANDLER'
-        }
-    """
-
     def extract_event(self, event):
         operation_type = event["operationType"]
         if operation_type == "delete":
             clusterTime   = event["clusterTime"]
             collection    = event["ns"]["coll"]
             db            = event["ns"]["db"]
-            object_id     = str(event["documentKey"]["_id"])
+            object_id     = event["documentKey"]["_id"]
             handler_name  = event["handler_name"]
             m_event       = msg_event.msg_event(
                 object_id,
@@ -191,7 +112,7 @@ class event_proc(threading.Thread):
             clusterTime   = event["clusterTime"]
             collection    = event["ns"]["coll"]
             db            = event["ns"]["db"]
-            object_id     = str(event["documentKey"]["_id"])
+            object_id     = event["documentKey"]["_id"]
             handler_name  = event["handler_name"]
             event["fullDocument"]["_id"] = str( event["fullDocument"]["_id"] )
             full_document = event["fullDocument"]
@@ -211,7 +132,7 @@ class event_proc(threading.Thread):
             clusterTime   = event["clusterTime"]
             collection    = event["ns"]["coll"]
             db            = event["ns"]["db"]
-            object_id     = str(event["documentKey"]["_id"])
+            object_id     = event["documentKey"]["_id"]
             handler_name  = event["handler_name"]
             changed_field = event["updateDescription"]
             m_event       = msg_event.msg_event(
