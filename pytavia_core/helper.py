@@ -5,6 +5,8 @@ import json
 import base64
 import copy
 
+from flask import make_response
+
 sys.path.append("pytavia_core"    )
 sys.path.append("pytavia_modules" )
 sys.path.append("pytavia_settings")
@@ -63,8 +65,26 @@ class response_msg:
         return record_prev
     # end def
 
-    def stringify(self):
-        return json.dumps( self.response )
+    def stringify(self, app=None):
+        record_prev = copy.deepcopy( self.response )
+        if app != None:
+            app.logger.debug( record_prev["message_data"] )
+        # end if
+        del record_prev["message_action"]
+        del record_prev["message_id"]
+        del record_prev["message_desc"]
+        del record_prev["message_data"]
+        return json.dumps( record_prev )
+    # end def
+
+    def http_stringify(self, app=None):
+        record_prev = self.stringify(app)
+        response    = make_response(
+            record_prev, 
+            200
+        )
+        response.mimetype = "application/json"
+        return response
     # end def
 
     def stringify_v1(self):
