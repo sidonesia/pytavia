@@ -30,7 +30,7 @@ pytavia_dispatch    = "mongodb://127.0.0.1:27017/" + pytavia_dispatchDB
 ###################### USER DATABASES BELOW HERE (MODIFYABLE) 
 
 
-mainDB                      = "cc-credit-scoring-DB-2"
+mainDB                      = "mainDB"
 mongo_main_db_report_string = "mongodb://127.0.0.1:27017/" + mainDB
 
 # This is where we have all the databases we want to connect to
