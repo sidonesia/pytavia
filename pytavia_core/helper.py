@@ -13,16 +13,6 @@ sys.path.append("pytavia_storage" )
 
 from pytavia_stdlib import idgen
 
-def bytes_xor(a, b) :
-    return bytes(x ^ y for x, y in zip(a, b))
-# end def
-
-def diva_signature(a , b ):
-    bytes_value = bytes_xor(str.encode(a),str.encode(b))
-    encoded     = base64.b64encode( bytes_value )
-    return encoded
-# end def
-
 class response_msg:
 
     mapping_data = {

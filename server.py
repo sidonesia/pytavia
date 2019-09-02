@@ -10,12 +10,15 @@ sys.path.append("pytavia_settings")
 sys.path.append("pytavia_stdlib"  ) 
 sys.path.append("pytavia_storage" ) 
 sys.path.append("pytavia_modules" ) 
+sys.path.append("pytavia_modules/app_module") 
 
 # adding comments
 from pytavia_stdlib  import utils
 from pytavia_core    import database 
 from pytavia_core    import config 
 from pytavia_stdlib  import idgen 
+
+from app_module import module1 
 
 
 ##########################################################
@@ -41,11 +44,8 @@ app.secret_key  = config.G_FLASK_SECRET
 ########################## CALLBACK API ###################################
 
 @app.route("/v1/api/api-v1", methods=["GET"])
-def register():
-    fk_user_id   = request.args.get("fk_user_id"  )
-    params       = {
-        "fk_user_id" : fk_user_id
-    }
+def api_v1():
+    params = request.args.to_dict()
     response = module1.module1(app).process( params )
     return response.stringify_v1()
 # end def
