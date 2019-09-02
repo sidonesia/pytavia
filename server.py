@@ -49,3 +49,11 @@ def api_v1():
     response = module1.module1(app).process( params )
     return response.stringify_v1()
 # end def
+
+@app.route("/v1/api/api-post-v1", methods=["POST"])
+def api_post_v1():
+    params = request.form.to_dict()
+    response = module1.module1(app).process( params )
+    return response.stringify_v1()
+# end def
+
