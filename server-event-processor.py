@@ -10,9 +10,8 @@ sys.path.append("pytavia_settings")
 sys.path.append("pytavia_stdlib"  )
 sys.path.append("pytavia_storage" )
 sys.path.append("pytavia_modules" )
-sys.path.append("pytavia_modules/init_proc" )
 sys.path.append("pytavia_modules/event_loop_executor" )
-sys.path.append("pytavia_modules/queue_workflow_process" )
+sys.path.append("pytavia_modules/event_handler" )
 
 from pytavia_stdlib      import utils
 from pytavia_core        import database
@@ -20,8 +19,8 @@ from pytavia_core        import config
 from pytavia_core        import pytavia_events
 from pytavia_stdlib      import idgen
 
-from queue_workflow_process import customer_evt_handler
-from event_loop_executor    import event_loop_proc
+from event_handler       import customer_evt_handler
+from event_loop_executor import event_loop_proc
 
 
 class server_event_handler(pytavia_events.pytavia_events):

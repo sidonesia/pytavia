@@ -10,7 +10,7 @@ sys.path.append("pytavia_settings")
 sys.path.append("pytavia_stdlib"  ) 
 sys.path.append("pytavia_storage" ) 
 sys.path.append("pytavia_modules" ) 
-sys.path.append("pytavia_modules/app_module") 
+sys.path.append("pytavia_modules/rest_api_controller") 
 
 # adding comments
 from pytavia_stdlib  import utils
@@ -18,7 +18,7 @@ from pytavia_core    import database
 from pytavia_core    import config 
 from pytavia_stdlib  import idgen 
 
-from app_module import module1 
+from rest_api_controller import module1 
 
 
 ##########################################################
