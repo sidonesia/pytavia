@@ -6,6 +6,8 @@ import base64
 import copy
 
 from flask import make_response
+from flask import jsonify
+from bson import json_util
 
 sys.path.append("pytavia_core"    )
 sys.path.append("pytavia_modules" )
@@ -18,18 +20,20 @@ from pytavia_stdlib import idgen
 class response_msg:
 
     mapping_data = {
-        "status" : "message_action",
-        "desc"   : "message_desc",
-        "data"   : "message_data",
+        "status"        : "message_action",
+        "desc"          : "message_desc"  ,
+        "status_code"   : "status_code"   ,
+        "data"          : "message_data"  ,
     }
 
-    def __init__(self, status, desc, data):
+    def __init__(self, status, desc, data, status_code="xxxx"):
         call_id       = idgen._get_api_call_id()
         self.response = {
             "id"             : call_id ,
-            "status"         : status  ,
+            "status_code"    : status_code  , # 0001...xxxx
+            "status"         : status  , 
             "desc"           : desc    ,
-            "data"           : data    ,
+            "data"           : data    ,            
             "message_id"     : call_id ,
             "message_action" : status  ,
             "message_desc"   : desc    ,
@@ -74,13 +78,22 @@ class response_msg:
         del record_prev["message_id"]
         del record_prev["message_desc"]
         del record_prev["message_data"]
-        return json.dumps( record_prev )
+
+        resp_json = json.loads(json_util.dumps(record_prev))
+        print("\n\n--------------------")
+        print("resp API\n")
+        # print(str (json.dumps( record_prev ) ) )
+        print(str(resp_json))
+
+        print("---------------------")
+        # return json.dumps( record_prev )
+        return resp_json
     # end def
 
     def http_stringify(self, app=None):
         record_prev = self.stringify(app)
         response    = make_response(
-            record_prev, 
+            record_prev,
             200
         )
         response.mimetype = "application/json"

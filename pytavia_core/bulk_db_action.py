@@ -2,22 +2,28 @@
 import config
 import database
 
+from model import mongo_model
+
 from pytavia_stdlib import utils
 
-class bulk_db_update:
+INSERT = "INSERT"
+DELETE = "DELETE"
+UPDATE = "UPDATE"
 
-    update_list = []
+class bulk_db_action:
+
+    action_list = []
     db_handle   = None
     
-
     def __init__(self, params):
         self.db_handle   = params["db_handle"]
         self.webapp      = params["app"]
-        self.update_list = []
+        self.action_list = []
     # end def
 
-    def add( self, collection , query , update , multi_operation = False , array_filters = None ):
-        self.update_list.append({
+    def add( self, action, collection , query=None , update=None , multi_operation = False , array_filters=None ):
+        self.action_list.append({
+            "action"            : action,
             "collection"        : collection,
             "query"             : query,
             "update"            : update,
@@ -48,7 +54,7 @@ class bulk_db_update:
         # sub - sub collection where main is referenced and duplicated and needs to be updated as well
         
         # update for the main record
-        self.add(collection, query, update, multi_operation=True)
+        self.add(UPDATE, collection, query, update, multi_operation=True)
 
         # referred key of main located in sub collection
         # if main collection == db_book and sub collection == db_author
@@ -93,13 +99,15 @@ class bulk_db_update:
                 # e.g. if main collection = db_books and fk_author is found then we do the replace
                 # ... to get the sub collection which is db_author
                 # THIS is the standard if we want to use this functionality
-                sub_collection = key.replace('fk','db', 1) 
-                db_sub_lookup = database.simple_load(sub_collection)    # get the sub collection pattern defined in the schema
-                
-                if sub_main_field_key in db_sub_lookup:                 # if the main collection is referenced inside the sub collection
-                    sub_main_field = db_sub_lookup[sub_main_field_key]
-                else:
-                    continue                                            # skip -- if one way reference only -- nothing to update in sub collection -- this is a bad case
+                sub_collection  = key.replace('fk','db', 1) 
+                # db_sub_lookup   = database.simple_load(sub_collection)    # get the sub collection pattern defined in the schema
+                # if sub_main_field_key in db_sub_lookup:                 # if the main collection is referenced inside the sub collection
+                #     sub_main_field = db_sub_lookup[sub_main_field_key]
+                # else:
+                #     continue                                            # skip -- if one way reference only -- nothing to update in sub collection -- this is a bad case
+                sub_main_field  = database.get_fk_structure(sub_collection, sub_main_field_key)
+                if sub_main_field == None:
+                    continue
                 
                 sub_main_field_type = type(sub_main_field)
                 if sub_main_field_type == dict:                                         # if main is referenced as a dict in sub collection. e.g. db_author.fk_book['name']
@@ -156,9 +164,9 @@ class bulk_db_update:
                         sub_query = { 'pkey' : sub_record_id, sub_record_main_key : main_record_id }
                 
                 if sub_main_field_type == list:                             # if reference of main in sub collection is an array -- add array filters!
-                    self.add(sub_collection, sub_query, sub_update_set, multi_operation=True, array_filters=sub_array_filters)     # bulk_update.execute must use update_many!
+                    self.add(UPDATE, sub_collection, sub_query, sub_update_set, multi_operation=True, array_filters=sub_array_filters)     # bulk_update.execute must use update_many!
                 else:
-                    self.add(sub_collection, sub_query, sub_update_set, multi_operation=True)
+                    self.add(UPDATE, sub_collection, sub_query, sub_update_set, multi_operation=True)
 
     def _deep_link_update_constructor(self, fk_structure, record, record_ref_key, touch_timestamp=True):
         
@@ -194,30 +202,44 @@ class bulk_db_update:
         return update
 
     def two_way_reference(self, main, sub, touch_timestamp=True):
-        main_collection = main["collection" ]       #db_main    
+        main_collection = main["collection" ]       # db_main    
+        sub_collection  = sub["collection"  ]       # db_sub   
         main_record     = main["record"     ]       
-        sub_collection  = sub["collection"  ]       #db_sub   
-        sub_record      = sub["record"      ]       
+        sub_record      = sub["record"      ]
+
+        # in some cases where record is not yet inserted, we have an object of mongo_model instead of a dict
+        # we don't have to deep copy if we'll just use it as reference
+        if isinstance(main_record, mongo_model):
+            main_record = main_record.get()         # returns the record in dict
+
+        if isinstance(sub_record, mongo_model):
+            sub_record  = sub_record.get()          # returns the record in dict
 
         main_ref_key    = main_collection.replace('db','fk', 1  )       #db_main -> fk_main
         sub_ref_key     = sub_collection.replace('db','fk', 1   )       #db_sub -> fk_sub
 
-        db_main_lookup  = database.simple_load(main_collection  )       #db_main's collection pattern in model.py
-        db_sub_lookup   = database.simple_load(sub_collection   )       #db_sub's collection pattern in model.py
+        # db_main_lookup  = database.simple_load(main_collection  )       #db_main's collection pattern in model.py
+        # db_sub_lookup   = database.simple_load(sub_collection   )       #db_sub's collection pattern in model.py
 
-        fk_sub_struct   = db_main_lookup[sub_ref_key]   # reference structure of fk_sub in db_main
-        fk_main_struct  = db_sub_lookup[main_ref_key]   # reference structure of fk_main in db_sub
-    
+        # fk_sub_struct   = db_main_lookup[sub_ref_key]   # reference structure of fk_sub in db_main
+        fk_sub_struct   = database.get_fk_structure(main_collection, sub_ref_key)
+        # fk_main_struct  = db_sub_lookup[main_ref_key]   # reference structure of fk_main in db_sub
+        fk_main_struct  = database.get_fk_structure(sub_collection, main_ref_key)
+
         # construct update for main collection
         main_update = self._deep_link_update_constructor(fk_sub_struct, sub_record, sub_ref_key, touch_timestamp)
-        self.add(main_collection,
+        self.add(
+            UPDATE,
+            main_collection,
             { "pkey"    : main_record["pkey"] },
             main_update
         )
 
         # construct update for sub collection
         sub_update = self._deep_link_update_constructor(fk_main_struct, main_record, main_ref_key, touch_timestamp)
-        self.add(sub_collection,
+        self.add(
+            UPDATE, 
+            sub_collection,
             { "pkey"    : sub_record["pkey"] },
             sub_update
         )
@@ -249,32 +271,47 @@ class bulk_db_update:
 
     def remove_two_way_reference(self, main, sub, touch_timestamp=True):
         main_collection = main["collection" ]       #db_main    
-        main_record     = main["record"     ]       
         sub_collection  = sub["collection"  ]       #db_sub   
+        main_record     = main["record"     ]       
         sub_record      = sub["record"      ]       
+
+        # in some cases where record is not yet inserted, we have an object of mongo_model instead of a dict
+        # we don't have to deep copy if we'll just use it as reference
+        if isinstance(main_record, mongo_model):
+            main_record = main_record.get()         # returns the record in dict
+
+        if isinstance(sub_record, mongo_model):
+            sub_record  = sub_record.get()          # returns the record in dict
         
         main_ref_key    = main_collection.replace('db','fk', 1  )       #db_main -> fk_main
         sub_ref_key     = sub_collection.replace('db','fk', 1   )       #db_sub -> fk_sub
 
-        db_main_lookup  = database.simple_load(main_collection  )       #db_main's collection pattern in model.py
-        db_sub_lookup   = database.simple_load(sub_collection   )       #db_sub's collection pattern in model.py
+        # db_main_lookup  = database.simple_load(main_collection  )       #db_main's collection pattern in model.py
+        # db_sub_lookup   = database.simple_load(sub_collection   )       #db_sub's collection pattern in model.py
 
-        fk_sub_struct   = db_main_lookup[sub_ref_key]   # reference structure of fk_sub in db_main
-        fk_main_struct  = db_sub_lookup[main_ref_key]   # reference structure of fk_main in db_sub
+        # fk_sub_struct   = db_main_lookup[sub_ref_key]   # reference structure of fk_sub in db_main
+        # fk_main_struct  = db_sub_lookup[main_ref_key]   # reference structure of fk_main in db_sub
+        fk_sub_struct   = database.get_fk_structure(main_collection, sub_ref_key)
+        fk_main_struct  = database.get_fk_structure(sub_collection, main_ref_key)
+
 
         main_record_pkey = main_record["pkey"   ]
         sub_record_pkey = sub_record["pkey"     ]
 
         # construct update for main collection
         main_update = self._deep_unlink_update_constructor(fk_sub_struct, sub_record_pkey, sub_ref_key, touch_timestamp)
-        self.add(main_collection,
+        self.add(
+            UPDATE,
+            main_collection,
             { "pkey"    : main_record_pkey },
             main_update
         )
 
         # construct update for sub collection
         sub_update = self._deep_unlink_update_constructor(fk_main_struct, main_record_pkey, main_ref_key, touch_timestamp)
-        self.add(sub_collection,
+        self.add(
+            UPDATE,
+            sub_collection,
             { "pkey"    : sub_record_pkey },
             sub_update
         )
@@ -282,30 +319,50 @@ class bulk_db_update:
     def execute(self, params):
         with self.db_handle.start_session() as lock:
             lock.start_transaction()
-            for record in self.update_list:
-                collection          = record["collection"       ]
-                cmd_query           = record["query"            ]    
-                cmd_update          = record["update"           ]
-                cmd_array_filters   = record["array_filters"    ]
-                cmd_multi_operation = record["multi_operation"  ]
+            for record in self.action_list:
+                action = record["action"]
 
-                if not cmd_multi_operation:         # default: update_one
-                    if cmd_array_filters == None:   # default: not dealing with array
-                        self.db_handle[config.mainDB][collection].update_one(
-                            cmd_query , cmd_update, session=lock
+                if action == UPDATE:
+                    collection          = record["collection"       ]
+                    cmd_query           = record["query"            ]    
+                    cmd_update          = record["update"           ]
+                    cmd_array_filters   = record["array_filters"    ]
+                    cmd_multi_operation = record["multi_operation"  ]
+
+                    if not cmd_multi_operation:         # default: update_one
+                        if cmd_array_filters == None:   # default: not dealing with array
+                            self.db_handle[config.mainDB][collection].update_one(
+                                cmd_query , cmd_update, session=lock
+                            )
+                        else:                           # with array filters
+                            self.db_handle[config.mainDB][collection].update_one(
+                                cmd_query , cmd_update, array_filters=cmd_array_filters, session=lock
+                            )
+                    else:                               # multi operation
+                        if cmd_array_filters == None:   # default: not dealing with array
+                            self.db_handle[config.mainDB][collection].update_many(
+                                cmd_query , cmd_update, session=lock
+                            )
+                        else:                           # with array filters
+                            self.db_handle[config.mainDB][collection].update_many(
+                                cmd_query , cmd_update, array_filters=cmd_array_filters, session=lock
+                            )
+
+                elif action == INSERT:
+                    collection = record["collection"]
+                    collection.insert()
+
+                elif action == DELETE:
+                    collection = record["collection"]
+                    cmd_query  = record["query"]
+
+                    if not cmd_multi_operation:
+                        self.db_handle[config.mainDB][collection].delete_one(
+                            cmd_query , session=lock
                         )
-                    else:                           # with array filters
-                        self.db_handle[config.mainDB][collection].update_one(
-                            cmd_query , cmd_update, array_filters=cmd_array_filters, session=lock
-                        )
-                else:                               # multi operation
-                    if cmd_array_filters == None:   # default: not dealing with array
-                        self.db_handle[config.mainDB][collection].update_many(
-                            cmd_query , cmd_update, session=lock
-                        )
-                    else:                           # with array filters
-                        self.db_handle[config.mainDB][collection].update_many(
-                            cmd_query , cmd_update, array_filters=cmd_array_filters, session=lock
+                    else:
+                        self.db_handle[config.mainDB][collection].delete_many(
+                            cmd_query , session=lock
                         )
 
             # end for

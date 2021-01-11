@@ -57,3 +57,73 @@ def api_post_v1():
     return response.stringify_v1()
 # end def
 
+### Sample generic endpoints
+"""
+### sample generic archive -- archive book
+@app.route("/process/book/archive", methods=["POST"])
+def book_proc_archive():
+    params = request.form.to_dict()
+    response = generic_proc.generic_proc(app).archive({
+        "collection"    : "db_book",
+        "pkey"          : params["pkey"]
+    })
+
+    if response.get('status_code') == config.G_STATUS['SUCCESS']['CODE']:
+        return response.http_stringify()
+    else:
+        return response.http_stringify()
+
+### sample generic restore -- restore book
+@app.route("/process/book/restore", methods=["POST"])
+def book_proc_restore():
+    params = request.form.to_dict()
+    response = generic_proc.generic_proc(app).restore({
+        "collection"    : "db_book",
+        "pkey"          : params["pkey"]
+    })
+
+    if response.get('status_code') == config.G_STATUS['SUCCESS']['CODE']:
+        return response.http_stringify()
+    else:
+        return response.http_stringify()
+
+### sample two way reference -- reference book to author and author to book
+@app.route("/process/book/add_author", methods=["POST"])
+def book_proc_add_author():
+    params = request.form.to_dict()
+    response = generic_proc.generic_proc(app).add_two_way_reference({
+        "main"  : {
+            "collection"    : "db_book",
+            "pkey"          : params["book_pkey"]
+        },  
+        "sub"  : {
+            "collection"    : "db_author",
+            "pkey"          : params["author_pkey"]
+        }
+    })
+
+    if response.get('status_code') == config.G_STATUS['SUCCESS']['CODE']:
+        return response.http_stringify()
+    else:
+        return response.http_stringify()
+
+### sample remove two way reference -- dereference book to author and vise versa
+@app.route("/process/book/remove_group", methods=["POST"])
+def book_proc_remove_group():
+    params = request.form.to_dict()
+    response = generic_proc.generic_proc(app).remove_two_way_reference({
+        "main"  : {
+            "collection"    : "db_book",
+            "pkey"          : params["book_pkey"]
+        },  
+        "sub"  : {
+            "collection"    : "db_author",
+            "pkey"          : params["author_pkey"]
+        }
+    })
+
+    if response.get('status_code') == config.G_STATUS['SUCCESS']['CODE']:
+        return response.http_stringify()
+    else:
+        return response.http_stringify()
+"""

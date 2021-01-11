@@ -1,7 +1,7 @@
 import os
 import sys
-import copy
-import logging
+# import copy
+# import logging
 import json
 import pytavia_logger
 
@@ -11,7 +11,7 @@ sys.path.append("pytavia_settings")
 sys.path.append("pytavia_stdlib"  )
 sys.path.append("pytavia_storage" )
 
-from pytavia_stdlib import idgen
+# from pytavia_stdlib import idgen
 
 G_FLASK_SECRET=b'_5#y2L"F4Q8z\n\xec]/'
 
@@ -63,3 +63,52 @@ G_DATABASE_CONNECT  = [
 
 G_RANDOM_START = config_json["G_RANDOM_START"]
 G_RANDOM_END   = config_json["G_RANDOM_END"]
+
+# these are just default status codes and descriptions
+G_STATUS = {
+    "SUCCESS"               : {
+        "CODE"              : "0000",
+        "DESC"              : "Operation Successful."
+    },
+    "UNEXPECTED_ERROR"      : {
+        "CODE"              : "9999",
+        "DESC"              : "Unexpected error occured."
+    },
+    # DATABASE RELATED STATUS CODES
+    "RECORD_NOT_FOUND"      : {
+        "CODE"              : "0101",
+        "DESC"              : "Record does not exist."
+    },
+    "FK_EXISTS"             : {
+        "CODE"              : "0102",
+        "DESC"              : "Record is already referenced."
+    },
+    "NO_FK_EXISTS"          : {
+        "CODE"              : "0103",
+        "DESC"              : "Record is not referenced."
+    },
+    "NOT_UNIQUE"          : {
+        "CODE"              : "0104",
+        "DESC"              : "Record is not unique"
+    },
+    # PAYLOAD RELATED STATUS CODES
+    "FIELD_REQUIRED"        : {
+        "CODE"              : "0201",
+        "DESC"              : "Field is required."
+    },
+    "NOT_NUMBER"            : {
+        "CODE"              : "0202",
+        "DESC"              : "Field should be a number."
+    },
+    "NOT_GREATER_THAN"      : {
+        "CODE"              : "0203",
+        "DESC"              : "The number should be greater than the correct value"
+    },
+    "NOT_LESS_THAN"         : {
+        "CODE"              : "0204",
+        "DESC"              : "The number should be less than the correct value"
+    },
+}
+
+# used by utils.py - _get_current_timestamp - used to convert to readable timestamp
+G_STR_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"             
