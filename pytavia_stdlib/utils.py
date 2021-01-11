@@ -110,3 +110,39 @@ def _cmp_su_password(params):
         return False
     # end if
 # end def
+
+def _get_current_timestamp(time_format = None):
+    if time_format == None:
+        try:
+            time_format = config.G_STR_TIME_FORMAT
+        except:
+            time_format = "%Y-%m-%d %H:%M:%S"
+            
+    curr_time = int(time.time())
+    timestamp = curr_time * 1000
+    timestamp_str = time.strftime(
+        time_format, time.localtime(curr_time)
+    )
+
+    return timestamp, timestamp_str
+
+def _get_records_in_list(array, key, q):
+    record_list = list(filter(lambda dictionary: dictionary[key] == q, array))
+    found = False
+    
+    if len(record_list) > 0:
+        found = True
+        
+    return found, record_list
+
+def _to_process_name(text):
+    return text.upper().replace(" ", "_")
+
+def _db_name_to_fk_name(db_name):
+    return db_name.replace('db','fk', 1) 
+
+def _fk_name_to_db_name(db_name):
+    return db_name.replace('fk','db', 1) 
+
+def _db_name_to_response_name(db_name):
+    return db_name.replace('db_','', 1) 
