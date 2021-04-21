@@ -112,3 +112,6 @@ G_STATUS = {
 
 # used by utils.py - _get_current_timestamp - used to convert to readable timestamp
 G_STR_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"             
+
+# use for google translate
+# G_TRANSLATOR_SERVICE = "google_trans_new"
