@@ -64,7 +64,7 @@ G_DATABASE_CONNECT  = [
 G_RANDOM_START = config_json["G_RANDOM_START"]
 G_RANDOM_END   = config_json["G_RANDOM_END"]
 
-# these are just default status codes and descriptions
+# these are just default status codes and descriptions -- plays along with validation.py
 G_STATUS = {
     "SUCCESS"               : {
         "CODE"              : "0000",
@@ -108,7 +108,38 @@ G_STATUS = {
         "CODE"              : "0204",
         "DESC"              : "The number should be less than the correct value"
     },
+    "NOT_IMAGE"             : {
+        "CODE"              : "0205",
+        "DESC"              : "Field should be an image."
+    },
+    "NOT_SNAKECASE"         : {
+        "CODE"              : "0206",
+        "DESC"              : "Field should be in snakecase format."
+    },
+    # SERVICE RELATED STATUS CODES
+    "WASABI_UPLOAD_ERROR"   : {
+        "CODE"              : "0301",
+        "DESC"              : "Unexpected error occured while uploading file in Wasabi."
+    },
+    "LANGUAGE_NOT_VALID"    : {
+        "CODE"              : "0302",
+        "DESC"              : "Language code provided not valid / supported."
+    }
 }
+
 
 # used by utils.py - _get_current_timestamp - used to convert to readable timestamp
 G_STR_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"             
+
+""" use for google translate """
+# G_TRANSLATOR_SERVICE = "google_trans_new"
+
+""" wasabi for file upload """
+# G_ATTRIBUTE_MEDIA_SRC       = "WASABI"
+# G_WSB_URL                   = 'https://s3.us-west-1.wasabisys.com'
+# WSB_ACCESS_ID               = config_json["wsb_access_id"]
+# WSB_SECRET_KEY              = config_json["wsb_secret_key"]
+# G_WSB_IMAGE_BUCKET          = "develop.lynk.id"
+# G_WSB_MAIN_FOLDER           = "adnet-dev/"
+
+# G_UPLOADER_SERVICE          = "wasabi"          # define here your default file upload service

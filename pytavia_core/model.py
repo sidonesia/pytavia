@@ -47,11 +47,50 @@ class mongo_model:
         )
     # end def
 # end class
-#
-#
-# Define the models/collections here for the mongo db
-#
 
+# for deep /  global updates
+def _traverse_db_paths(field, table_ref_names, paths, curr_path):
+    for key, value in field.items():
+        value_type = type(value)
+        if key in table_ref_names:              # found a referenced record!!
+            if value_type == dict and "pkey" in value:
+                paths.append({
+                    # curr_path + key + "." : list(value.keys())
+                    curr_path + key + "." : value
+                })
+            elif value_type == list and "pkey" in value[0]:
+                paths.append({
+                    # curr_path + key + ".$[elem]." : list(value[0].keys())
+                    curr_path + key + ".$[elem]." : value[0]
+                })
+            else:                               # means that the table is referenced as a pkey -- we do not support globally updating pkey
+                continue
+        
+        if value_type == dict:
+            _traverse_db_paths(value, table_ref_names, paths, curr_path + key + ".")
+        elif value_type == list and len(value) != 0 and type(value[0]) == dict:
+            _traverse_db_paths(value[0], table_ref_names, paths, curr_path + key + ".$[].")
+
+def get_db_table_paths(db):
+    update_paths = {}
+    table_fks = {}
+    for table in db:
+        update_paths[table] = []
+        if "__db__referenced__names__" not in db[table]:
+            continue
+        for ref_table in db:
+            paths = []
+            _traverse_db_paths(db[ref_table], db[table]["__db__referenced__names__"], paths, "")
+            if ref_table not in table_fks:
+                table_fks[ref_table] = []
+            table_fks[ref_table] += paths
+            if len(paths) > 0:
+                update_paths[table].append({
+                    ref_table : paths
+                })
+    return update_paths, table_fks
+
+# Define the models/collections here for the mongo db
 db = {
     # SYSTEM TABLES WITH _sys_, do not modify
     "db_sys_resume_history"         : {

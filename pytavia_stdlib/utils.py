@@ -146,3 +146,16 @@ def _fk_name_to_db_name(db_name):
 
 def _db_name_to_response_name(db_name):
     return db_name.replace('db_','', 1) 
+    
+def _set_dict_defaults(record, defaults):
+    for key, value in defaults.items():
+        if key not in record:
+            record[key] = value
+    return record
+
+def _boolean(variable):
+    true_list = [ "true", "yes", 1, True ]
+    if type(variable) == str:
+        variable = variable.lower()
+    
+    return True if variable in true_list else False
