@@ -39,7 +39,9 @@ from flask_wtf.csrf import CSRFError
 # Main app configurations
 #
 app             = Flask( __name__, config.G_STATIC_URL_PATH )
+csrf            = CSRFProtect(app)
 app.secret_key  = config.G_FLASK_SECRET
+app.db_update_context, app.db_table_fks = model.get_db_table_paths(model.db)
 
 ########################## CALLBACK API ###################################
 
@@ -59,6 +61,7 @@ def api_post_v1():
 
 ### Sample generic endpoints
 """
+# TODO: update example using new db actions
 ### sample generic archive -- archive book
 @app.route("/process/book/archive", methods=["POST"])
 def book_proc_archive():
