@@ -113,5 +113,15 @@ G_STATUS = {
 # used by utils.py - _get_current_timestamp - used to convert to readable timestamp
 G_STR_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"             
 
-# use for google translate
+""" use for google translate """
 # G_TRANSLATOR_SERVICE = "google_trans_new"
+
+""" wasabi for file upload """
+# G_ATTRIBUTE_MEDIA_SRC       = "WASABI"
+# G_WSB_URL                   = 'https://s3.us-west-1.wasabisys.com'
+# WSB_ACCESS_ID               = config_json["wsb_access_id"]
+# WSB_SECRET_KEY              = config_json["wsb_secret_key"]
+# G_WSB_IMAGE_BUCKET          = "develop.lynk.id"
+# G_WSB_MAIN_FOLDER           = "adnet-dev/"
+
+# G_UPLOADER_SERVICE          = "wasabi"          # define here your default file upload service
