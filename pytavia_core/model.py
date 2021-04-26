@@ -12,7 +12,10 @@ class mongo_model:
         if not (key in self._lookup_record):
             raise ValueError('SETTING_NON_EXISTING_FIELD', key, value)
         # end if
-        self._mongo_record[key] = value
+        if isinstance(value, type(self)):  # if value is a mongo_model
+            self._mongo_record[key] = copy.deepcopy(value.get())
+        else:
+            self._mongo_record[key] = copy.deepcopy(value)
     # end def
 
     def get(self):
@@ -116,7 +119,8 @@ db = {
         "pkey"                        : "",
         "misc"                        : {},
     },
-    
+   
+} 
 """
 ### New way to define tables -- required in using bulk_db_action.py
 ### Samples below
@@ -158,4 +162,3 @@ db = {
     }
 """
 
-}
