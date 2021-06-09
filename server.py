@@ -16,6 +16,7 @@ sys.path.append("pytavia_modules/rest_api_controller")
 from pytavia_stdlib  import utils
 from pytavia_core    import database 
 from pytavia_core    import config 
+from pytavia_core    import model
 from pytavia_stdlib  import idgen 
 
 from rest_api_controller import module1 

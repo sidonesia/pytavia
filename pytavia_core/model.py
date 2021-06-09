@@ -12,7 +12,10 @@ class mongo_model:
         if not (key in self._lookup_record):
             raise ValueError('SETTING_NON_EXISTING_FIELD', key, value)
         # end if
-        self._mongo_record[key] = value
+        if isinstance(value, type(self)):  # if value is a mongo_model
+            self._mongo_record[key] = copy.deepcopy(value.get())
+        else:
+            self._mongo_record[key] = copy.deepcopy(value)
     # end def
 
     def get(self):
@@ -26,7 +29,8 @@ class mongo_model:
 
     def insert(self, lock=None):
         collection_name = self._lookup_record["__db__name__"]
-        del self._mongo_record["__db__name__"]
+        # del self._mongo_record["__db__name__"]
+        self._mongo_record.pop('__db__name__', None)  # safely delete the key. prevents KeyError when with_transaction retries the transaction
         if lock == None:
             self._db_handle[collection_name].insert_one(  
                 self._mongo_record
@@ -116,7 +120,8 @@ db = {
         "pkey"                        : "",
         "misc"                        : {},
     },
-    
+   
+} 
 """
 ### New way to define tables -- required in using bulk_db_action.py
 ### Samples below
@@ -158,4 +163,3 @@ db = {
     }
 """
 
-}
