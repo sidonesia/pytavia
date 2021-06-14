@@ -26,8 +26,11 @@ G_UPLOAD_PATH               = G_HOME_PATH + G_STATIC_URL_PATH + "/upload"
 G_UPLOAD_URL_PATH           = G_STATIC_URL_PATH + "/upload"
 G_STATIC_STARTUP_PATH       = G_HOME_PATH + "/pytavia_startup"
 
+G_FLASK_ENV                 = os.getenv('FLASK_ENV') or "development"
+G_CONF_FILE                 = "/app-production.conf" if G_FLASK_ENV == "production" else "/app-running.conf"
+
 # read the config file and pass the values in
-app_config_handle           = open(G_STATIC_STARTUP_PATH + "/app-running.conf" , "r")
+app_config_handle           = open(G_STATIC_STARTUP_PATH + G_CONF_FILE , "r")
 config_json_str             = app_config_handle.read()
 config_json                 = json.loads( config_json_str )
 
