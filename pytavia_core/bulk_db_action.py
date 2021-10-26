@@ -2,7 +2,7 @@
 import config
 import database
 import copy
-# import pprint
+import pprint
 from model import mongo_model
 
 from pytavia_stdlib import utils
@@ -209,13 +209,18 @@ class bulk_db_action:
 
                     sub_update_set = { '$set' : sub_update_set}
                     sub_query_path = path.replace(".$[elem].",".").replace(".$[].",".")
+                    if "$[elem]" in path:
+                        sub_array_elem_path = 'elem' + path.split("$[elem]")[-1] + 'pkey'
+                    else:
+                        sub_array_elem_path = "elem.pkey"
 
                     # generate the query for the given path
                     sub_query = []
                     sub_array_filters = []
                     for pkey in pkeys:
                         sub_query.append({ sub_query_path + "pkey" : pkey})
-                        sub_array_filters.append({ "elem.pkey" : pkey})
+                        # sub_array_filters.append({ "elem.pkey" : pkey})
+                        sub_array_filters.append({ sub_array_elem_path : pkey})
 
                     if len(pkeys) > 1:
                         sub_query = {"$or" : sub_query}
@@ -294,7 +299,7 @@ class bulk_db_action:
             return fk_update_list
 
 
-    def _global_link_reference(self, main, sub, touch_timestamp=True, add_archived_field=True):
+    def _global_link_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
 
         main_collection = main["collection" ]       # db_main    
         sub_collection  = sub["collection"  ]       # db_sub   
@@ -321,8 +326,30 @@ class bulk_db_action:
 
                 fk_update = self.__assign_fk_values(copy.deepcopy(fk_update), copy.deepcopy(main_record), main_clean_record, main_set_fields)
 
-                if ".$[elem]." in fk_path:          # meaning it is a list of fk 
-                    ref_key = fk_path.replace(".$[elem].","")
+                """ 
+                Cases:
+                1. Walang $[elem] or $[]
+                2. Me $[elem] walang $[]
+                3. Me $[elem] me $[]
+                4. Ends with $[elem]
+                5. Does not end with $[elem]
+
+                research kung need pa ba ung $[]
+                ANG $[] AT $[ELEM] ay hindi ginagamit sa query!
+                
+                """
+
+                """ 
+                1. endswith dapat ung unang condition
+                2. replace middle elem with $[] -- ang intention ay kung ung fk ay nasa loob ng array -- lahat mauupdate -nope????
+                -- OR do we need to replace middle $[] with elem
+                PANG SET LANG UNG ARRAY FILTER!
+                """
+
+                array_filter = None
+                # if ".$[elem]." in fk_path:          # meaning it is a list of fk        #NOTE: 1. endswith ba dapat??
+                if fk_path.endswith(".$[elem]."):
+                    ref_key = fk_path.replace(".$[elem].","")                           #NOTE: 2. replace din ba ung $[]
                     db_operation = "$push"
 
                     # pull old reference TODO: improve to updating instead of pulling
@@ -330,13 +357,16 @@ class bulk_db_action:
                         UPDATE,
                         sub_collection,
                         { "pkey"    : sub_record["pkey"] },
-                        { "$pull" : { ref_key : { "pkey" : main_record["pkey"] } } },
+                        { "$pull" : { ref_key : { "pkey" : main_record["pkey"] } } },   #NOTE: 3. checkout ref_key
                         multi_operation=True
                     )
 
                 else:
-                    ref_key = fk_path.rstrip(".")
+                    ref_key = fk_path.rstrip(".")                                       #NOTE: 4. same, papalitan ba ung elem at $[]
                     db_operation = "$set"
+
+                    if ".$[elem]." in fk_path:  # array in middle of path
+                        array_filter = [{ 'elem' + fk_path.split("$[elem]")[-1] + 'pkey' : { "$in" : ["", main_record["pkey"]] }}]
 
                 update = { db_operation : { ref_key : fk_update } }
                 if touch_timestamp:
@@ -346,13 +376,23 @@ class bulk_db_action:
                     update["$set"]["last_modified_timestamp"    ] = timestamp
                     update["$set"]["last_modified_timestamp_str"] = timestamp_str
 
-                self.add(
-                    UPDATE,
-                    sub_collection,
-                    { "pkey"    : sub_record["pkey"] },
-                    update,
-                    multi_operation=True
-                )
+                if array_filter != None:
+                    self.add(
+                        UPDATE,
+                        sub_collection,
+                        { "pkey"    : sub_record["pkey"] },
+                        update,
+                        multi_operation=True,
+                        array_filters=array_filter
+                    )
+                else:
+                    self.add(
+                        UPDATE,
+                        sub_collection,
+                        { "pkey"    : sub_record["pkey"] },
+                        update,
+                        multi_operation=True
+                    )
 
                 tbl_update_context = self.webapp.db_update_context[main_collection]
 
@@ -360,7 +400,7 @@ class bulk_db_action:
                     collection, tbl_fks = next(iter(tbl.items()))
                     for tbl_fk in tbl_fks:
                         fk_path, fk_update = copy.deepcopy(next(iter(tbl_fk.items())))
-
+                        
                         if not fk_path.endswith(main_fk_path):
                             continue
                         
@@ -372,7 +412,7 @@ class bulk_db_action:
                             continue
 
                         key_pointer = -2
-                        if sub_path_keys[key_pointer] == "$[]":
+                        if sub_path_keys[key_pointer] == "$[elem]" or sub_path_keys[key_pointer] == "$[]":
                             sub_path_keys[key_pointer] = "$[elem]"
                             key_pointer -= 1
                         
@@ -380,6 +420,7 @@ class bulk_db_action:
                             continue
 
                         sub_ref_names = database.get_referenced_names(sub_collection)
+                        # print(sub_ref_names, sub_collection, sub_path_keys, sub_path_keys[key_pointer])
                         if sub_path_keys[key_pointer] not in sub_ref_names:
                             continue
 
@@ -390,7 +431,8 @@ class bulk_db_action:
                         fk_update = self.__assign_fk_values(copy.deepcopy(fk_update), copy.deepcopy(main_record), main_clean_record, main_set_fields)
 
                         new_sub_path = ".".join(sub_path_keys)
-                        if ".$[elem]." in main_fk_path:          # meaning it is a list of fk 
+                        # if ".$[elem]." in main_fk_path:          # meaning it is a list of fk 
+                        if main_fk_path.endswith(".$[elem]."):
                             ref_key = new_sub_path + main_fk_path.replace(".$[elem].","")
                             db_operation = "$push"
                         else:
@@ -398,8 +440,13 @@ class bulk_db_action:
                             db_operation = "$set"
 
                         update = { db_operation : { ref_key : fk_update } }
-                        if "$[elem]" in new_sub_path:           # we need to use subarray to query
+                        # if "$[elem]" in new_sub_path:           # we need to use subarray to query
+                        if "$[elem]" in ref_key:           # we need to use subarray to query
                             sub_array_filters = [{ "elem.pkey" : sub_record["pkey"]}]
+                            # sub_array_ref_key = ref_key.split("$[elem]")[-1]
+                            # sub_array_ref_key = sub_array_ref_key + '.' if not sub_array_ref_key.endswith('.') else sub_array_ref_key
+                            # sub_array_ref_key = '.' + sub_array_ref_key if not sub_array_ref_key.startswith('.') else sub_array_ref_key
+                            # sub_array_filters = [{ 'elem' + sub_array_ref_key + 'pkey' : sub_record["pkey"]}]
                             
                             sub_query = { ref_key.split("$[elem]")[0].replace(".$[].",".") + "pkey" : sub_record["pkey"] }
                             # pull old reference TODO: improve to updating instead of pulling
@@ -430,7 +477,7 @@ class bulk_db_action:
 
                             self.add(UPDATE, collection, sub_query, update, multi_operation=True)
 
-    def global_add_reference(self, main, sub, touch_timestamp=True, add_archived_field = True):
+    def global_add_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
         # in some cases where record is not yet inserted, we have an object of mongo_model instead of a dict
         # we don't have to deep copy if we'll just use it as reference
         if isinstance(main["record"], mongo_model):
@@ -442,7 +489,7 @@ class bulk_db_action:
         self._global_link_reference(copy.deepcopy(main), copy.deepcopy(sub), touch_timestamp, add_archived_field)
         self._global_link_reference(copy.deepcopy(sub), copy.deepcopy(main), touch_timestamp, add_archived_field)
 
-    def _global_unlink_reference(self, main, sub, touch_timestamp=True, add_archived_field=True):
+    def _global_unlink_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
 
         main_collection = main["collection" ]       # db_main    
         sub_collection  = sub["collection"  ]       # db_sub   
@@ -463,13 +510,18 @@ class bulk_db_action:
                 if add_archived_field:
                     database._db_add_archive_field(fk_update)
 
-                if ".$[elem]." in fk_path:          # meaning it is a list of fk 
+                array_filter = None
+                # if ".$[elem]." in fk_path:          # meaning it is a list of fk 
+                if fk_path.endswith(".$[elem]."):
                     fk_update = { "pkey" : main_record["pkey"] }
                     ref_key = fk_path.replace(".$[elem].","")
                     db_operation = "$pull"
                 else:
                     ref_key = fk_path.rstrip(".")
                     db_operation = "$set"
+
+                    if ".$[elem]." in fk_path:  # array in middle of path
+                        array_filter = [{ 'elem' + fk_path.split("$[elem]")[-1] + 'pkey' : { "$in" : ["", main_record["pkey"]] }}]
                 
                 update = { db_operation : { ref_key : fk_update } }
                 if touch_timestamp:
@@ -479,13 +531,23 @@ class bulk_db_action:
                     update["$set"]["last_modified_timestamp"    ] = timestamp
                     update["$set"]["last_modified_timestamp_str"] = timestamp_str
 
-                self.add(
-                    UPDATE,
-                    sub_collection,
-                    { "pkey"    : sub_record["pkey"] },
-                    update,
-                    multi_operation=True
-                )
+                if array_filter != None:
+                    self.add(
+                        UPDATE,
+                        sub_collection,
+                        { "pkey"    : sub_record["pkey"] },
+                        update,
+                        multi_operation=True,
+                        array_filters=array_filter
+                    )
+                else:
+                    self.add(
+                        UPDATE,
+                        sub_collection,
+                        { "pkey"    : sub_record["pkey"] },
+                        update,
+                        multi_operation=True
+                    )
 
                 tbl_update_context = self.webapp.db_update_context[main_collection]
 
@@ -505,7 +567,7 @@ class bulk_db_action:
                             continue
 
                         key_pointer = -2
-                        if sub_path_keys[key_pointer] == "$[]":
+                        if sub_path_keys[key_pointer] == "$[elem]" or sub_path_keys[key_pointer] == "$[]":
                             sub_path_keys[key_pointer] = "$[elem]"
                             key_pointer -= 1
                         
@@ -521,7 +583,8 @@ class bulk_db_action:
                             database._db_add_archive_field(fk_update)
 
                         new_sub_path = ".".join(sub_path_keys)
-                        if ".$[elem]." in main_fk_path:          # meaning it is a list of fk 
+                        # if ".$[elem]." in main_fk_path:          # meaning it is a list of fk 
+                        if main_fk_path.endswith(".$[elem]."):
                             fk_update = { "pkey" : main_record["pkey"] }
                             ref_key = new_sub_path + main_fk_path.replace(".$[elem].","")
                             db_operation = "$pull"
@@ -530,16 +593,21 @@ class bulk_db_action:
                             db_operation = "$set"
 
                         update = { db_operation : { ref_key : fk_update } }
-                        if "$[elem]" in new_sub_path:           # we need to use subarray to query
+                        # if "$[elem]" in new_sub_path:           # we need to use subarray to query
+                        if "$[elem]" in ref_key:           # we need to use subarray to query
                             sub_query = { ref_key.split("$[elem]")[0].replace(".$[].",".") + "pkey" : sub_record["pkey"] }
                             sub_array_filters = [{ "elem.pkey" : sub_record["pkey"]}]
+                            # sub_array_ref_key = ref_key.split("$[elem]")[-1]
+                            # sub_array_ref_key = sub_array_ref_key + '.' if not sub_array_ref_key.endswith('.') else sub_array_ref_key
+                            # sub_array_ref_key = '.' + sub_array_ref_key if not sub_array_ref_key.startswith('.') else sub_array_ref_key
+                            # sub_array_filters = [{ 'elem' + sub_array_ref_key + 'pkey' : sub_record["pkey"]}]
                             self.add(UPDATE, collection, sub_query, update, multi_operation=True, array_filters=sub_array_filters)
                         else:
                             # sub_query = [{ new_sub_path + "pkey" : sub_record["pkey"]}]
                             sub_query = { new_sub_path + "pkey" : sub_record["pkey"]}
                             self.add(UPDATE, collection, sub_query, update, multi_operation=True)
 
-    def global_remove_reference(self, main, sub, touch_timestamp=True, add_archived_field = True):
+    def global_remove_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
         # in some cases where record is not yet inserted, we have an object of mongo_model instead of a dict
         # we don't have to deep copy if we'll just use it as reference
         if isinstance(main["record"], mongo_model):
@@ -551,7 +619,7 @@ class bulk_db_action:
         self._global_unlink_reference(copy.deepcopy(main), copy.deepcopy(sub), touch_timestamp, add_archived_field)
         self._global_unlink_reference(copy.deepcopy(sub), copy.deepcopy(main), touch_timestamp, add_archived_field)
 
-    def _deep_link_update_constructor(self, fk_structure, record, record_ref_key, touch_timestamp=True):
+    def _deep_link_update_constructor(self, fk_structure, record, record_ref_key, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP):
         
         # construct update for collection
         fk_structure_type = type(fk_structure)
@@ -584,7 +652,7 @@ class bulk_db_action:
 
         return update
 
-    def two_way_reference(self, main, sub, touch_timestamp=True):
+    def two_way_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP):
         main_collection = main["collection" ]       # db_main    
         sub_collection  = sub["collection"  ]       # db_sub   
         main_record     = main["record"     ]       
@@ -627,7 +695,7 @@ class bulk_db_action:
             sub_update
         )
 
-    def _deep_unlink_update_constructor(self, fk_structure, fk_pkey, record_ref_key, touch_timestamp=True):
+    def _deep_unlink_update_constructor(self, fk_structure, fk_pkey, record_ref_key, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP):
         
         # construct update for collection
         fk_structure_type = type(fk_structure)
@@ -652,7 +720,7 @@ class bulk_db_action:
         
         return update
 
-    def remove_two_way_reference(self, main, sub, touch_timestamp=True):
+    def remove_two_way_reference(self, main, sub, touch_timestamp = config.G_RECORD_ADD_MODIFIED_TIMESTAMP):
         main_collection = main["collection" ]       #db_main    
         sub_collection  = sub["collection"  ]       #db_sub   
         main_record     = main["record"     ]       

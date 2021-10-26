@@ -146,7 +146,7 @@ def _fk_name_to_db_name(db_name):
 
 def _db_name_to_response_name(db_name):
     return db_name.replace('db_','', 1) 
-    
+
 def _set_dict_defaults(record, defaults):
     for key, value in defaults.items():
         if key not in record:
@@ -159,3 +159,9 @@ def _boolean(variable):
         variable = variable.lower()
     
     return True if variable in true_list else False
+
+# replace last 'x' occurrences of old to new
+# source: https://stackoverflow.com/questions/2556108/rreplace-how-to-replace-the-last-occurrence-of-an-expression-in-a-string
+def rreplace(s, old, new, occurrence):
+    li = s.rsplit(old, occurrence)
+    return new.join(li)
