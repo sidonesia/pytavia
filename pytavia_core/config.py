@@ -67,6 +67,9 @@ G_DATABASE_CONNECT  = [
 G_RANDOM_START = config_json["G_RANDOM_START"]
 G_RANDOM_END   = config_json["G_RANDOM_END"]
 
+G_RECORD_ADD_MODIFIED_TIMESTAMP = True
+G_RECORD_ADD_ARCHIVED_TIMESTAMP = True
+
 # these are just default status codes and descriptions -- plays along with validation.py
 G_STATUS = {
     "SUCCESS"               : {

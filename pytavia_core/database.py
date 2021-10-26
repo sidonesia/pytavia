@@ -53,7 +53,7 @@ def _db_add_archive_field(record):
     record["archived_timestamp"]        = ""
     record["archived_timestamp_str"]    = ""
 
-def db_fk_settings(record, add_archived_field = True):
+def db_fk_settings(record, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     # in models.py, we may define the reference array with a single item for the structure. We will empty it here before insert.
     for key in record:
         if type(record[key]) == list and key.startswith('fk'):
@@ -79,7 +79,7 @@ def get_record(db_table):
     return copy.deepcopy( record )
 #end def
 
-def _traverse_record(record, keys, add_archived_field = True):
+def _traverse_record(record, keys, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     if len(keys) == 0:
         if add_archived_field:
             _db_add_archive_field(record)
@@ -99,7 +99,7 @@ def _traverse_record(record, keys, add_archived_field = True):
     return record
 
 
-def _clean_record(record, table_fks, add_archived_field = True):
+def _clean_record(record, table_fks, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     # in models.py, we may define the reference array with a single item for the structure. We will empty it here before insert.
     for path in table_fks:
         keys = next(iter(path)).rstrip(".").split(".")
@@ -110,7 +110,7 @@ def _clean_record(record, table_fks, add_archived_field = True):
 
     return record
 
-def new_record(db_handle, db_table, db_table_fks, add_modified_field = True, add_archived_field = True):
+def new_record(db_handle, db_table, db_table_fks, add_modified_field = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     record = copy.deepcopy(db[db_table])
     
     record = _clean_record(record, db_table_fks[db_table], add_archived_field)
@@ -139,7 +139,7 @@ def new_record(db_handle, db_table, db_table_fks, add_modified_field = True, add
     return  mongo_record_model 
 #end def
 
-def new(db_handle, db_table, add_modified_field = True, add_archived_field = True):
+def new(db_handle, db_table, add_modified_field = config.G_RECORD_ADD_MODIFIED_TIMESTAMP, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     record    = copy.deepcopy(db[db_table])
 
     db_fk_settings(record, add_archived_field)
@@ -198,7 +198,7 @@ def simple_load(db_table, complete=False):
         
     return record
 
-def get_fk_structure(db_table, fk_key, add_archived_field = True):
+def get_fk_structure(db_table, fk_key, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     main_table = simple_load(db_table)
     fk_structure = None
 

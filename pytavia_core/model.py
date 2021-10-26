@@ -1,5 +1,11 @@
 import copy
 
+# replace last 'x' occurrences of old to new
+# source: https://stackoverflow.com/questions/2556108/rreplace-how-to-replace-the-last-occurrence-of-an-expression-in-a-string
+def rreplace(s, old, new, occurrence):
+    li = s.rsplit(old, occurrence)
+    return new.join(li)
+
 class mongo_model:
 
     def __init__(self, record, lookup, db_handle):
@@ -87,6 +93,13 @@ def get_db_table_paths(db):
             _traverse_db_paths(db[ref_table], db[table]["__db__referenced__names__"], paths, "")
             if ref_table not in table_fks:
                 table_fks[ref_table] = []
+            for p in paths:
+                temp_keys = []
+                for k in p:
+                    if "$[]" in k and "$[elem]" not in k:
+                        temp_keys.append(k)
+                for k in temp_keys:
+                    p[rreplace(k,'$[]','$[elem]', 1)] = p.pop(k)
             table_fks[ref_table] += paths
             if len(paths) > 0:
                 update_paths[table].append({
