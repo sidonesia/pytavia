@@ -1,4 +1,3 @@
-import datetime
 import time
 import random
 import hashlib
@@ -8,16 +7,17 @@ import sys
 import base64
 import requests 
 import json
+import enum
 
+from datetime import datetime, timedelta, timezone
+
+sys.path.append("pytavia_core"    )
+sys.path.append("pytavia_settings")
+sys.path.append("pytavia_storage" )
+sys.path.append("pytavia_modules" )
 
 from pytavia_core import config
 from pytavia_core import database
-from flask import Flask
-from flask import redirect
-from flask import make_response
-
-app            = Flask( __name__, config.G_STATIC_URL_PATH )
-app.secret_key = config.G_FLASK_SECRET
 
 wmsDB = database.get_db_conn( config.mainDB )
 
@@ -125,6 +125,33 @@ def _get_current_timestamp(time_format = None):
     )
 
     return timestamp, timestamp_str
+
+def _get_current_time_log(time_format = None):
+    if time_format == None:
+        try:
+            time_format = config.G_STR_TIME_FORMAT
+        except:
+            time_format = "%Y-%m-%d %H:%M:%S"
+            
+    curr_time = int(time.time())
+    timestamp = curr_time * 1000
+    timestamp_str = time.strftime(
+        time_format, time.localtime(curr_time)
+    )
+
+    year            = time.strftime("%Y", time.localtime(curr_time))        #'2022'
+    year_month      = time.strftime("%Y%m", time.localtime(curr_time))      #'202202'
+    year_month_day  = time.strftime("%Y%m%d", time.localtime(curr_time))    #'20220215'
+
+    time_log = {
+        "timestamp"     : timestamp,
+        "timestamp_str" : timestamp_str,
+        "year"          : year,
+        "year_month"    : year_month,
+        "year_month_day": year_month_day,
+    }
+
+    return time_log
 
 def _get_records_in_list(array, key, q):
     record_list = list(filter(lambda dictionary: dictionary[key] == q, array))

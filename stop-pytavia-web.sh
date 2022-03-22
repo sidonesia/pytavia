@@ -1,5 +1,10 @@
 #!/usr/bin/sh
-# use the same APPNAME in start-pytavia-web.sh
+# use the same APPNAME, HOST, PORT in start-pytavia-web.sh
 APPNAME=PYTAVIA
+HOST=localhost
+PORT=49000
 
-pkill -f "gunicorn -n $APPNAME" && printf "Application $APPNAME has been stopped ...\n"
+printf "\n#########################################\n"
+pkill -f "flask run --host=$HOST --port=$PORT" && printf "\nApplication $APPNAME has been stopped ...\n"
+pkill -f "gunicorn -n $APPNAME" && printf "\nApplication $APPNAME has been stopped ...\n"
+printf "\n#########################################\n"

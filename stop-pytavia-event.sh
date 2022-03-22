@@ -4,4 +4,7 @@ APPNAME=PYTAVIA-EVT
 
 KILLPID=`ps -ef | grep $APPNAME | grep -v grep | gawk '{ print $2}'`
 kill $KILLPID
-echo "process $KILLPID has been stopped ..."
+
+printf "\n#########################################\n"
+printf "\nApplication $APPNAME ($KILLPID) has been stopped ...\n"
+printf "\n#########################################\n"

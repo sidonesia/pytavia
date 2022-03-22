@@ -27,10 +27,10 @@ G_UPLOAD_URL_PATH           = G_STATIC_URL_PATH + "/upload"
 G_STATIC_STARTUP_PATH       = G_HOME_PATH + "/pytavia_startup"
 
 G_FLASK_ENV                 = os.getenv('FLASK_ENV') or "development"
-G_CONF_FILE                 = "/app-production.conf" if G_FLASK_ENV == "production" else "/app-running.conf"
+G_CONF_FILE                 = os.getenv('CONF_FILE') or "app-running.conf"
 
 # read the config file and pass the values in
-app_config_handle           = open(G_STATIC_STARTUP_PATH + G_CONF_FILE , "r")
+app_config_handle           = open(G_STATIC_STARTUP_PATH + "/" + G_CONF_FILE , "r")
 config_json_str             = app_config_handle.read()
 config_json                 = json.loads( config_json_str )
 
@@ -45,16 +45,15 @@ plogger.print_out("PYTAVIA - CONFIG MODULE")
 plogger.print_out( config_json_str )
 plogger.print_out("---------------------------------------")
 
-# CORE DATABASES DO NOT MODIFY
-
-pytavia_dispatchDB  = "pytavia_dispatchDB"
-pytavia_dispatch    = "mongodb://127.0.0.1:27017/" + pytavia_dispatchDB
 
 ###################### USER DATABASES BELOW HERE (MODIFYABLE) 
-
-
 mainDB                      = config_json["mainDB"]
 mongo_main_db_report_string = config_json["mongo_main_db_report_string"]
+
+# CORE DATABASES DO NOT MODIFY
+pytavia_dispatchDB  = "pytavia_dispatchDB"
+# pytavia_dispatch    = "mongodb://127.0.0.1:27017/" + pytavia_dispatchDB
+pytavia_dispatch    = mongo_main_db_report_string + "/" + pytavia_dispatchDB
 
 # This is where we have all the databases we want to connect to
 G_DATABASE_CONNECT  = [

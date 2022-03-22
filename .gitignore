@@ -156,3 +156,8 @@ dmypy.json
 
 # vscode
 .vscode/
+
+# pem keys
+*.pem
+
+.DS_Store

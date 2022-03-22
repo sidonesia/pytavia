@@ -50,8 +50,11 @@ def get_db_conn(db_conn):
 #end def
 
 def _db_add_archive_field(record):
-    record["archived_timestamp"]        = ""
-    record["archived_timestamp_str"]    = ""
+    record["archived_timestamp"         ] = ""
+    record["archived_timestamp_str"     ] = ""
+    record["archived_timestamp_yy"      ] = ""
+    record["archived_timestamp_yy_mm"   ] = ""
+    record["archived_timestamp_yy_mm_dd"] = ""
 
 def db_fk_settings(record, add_archived_field = config.G_RECORD_ADD_ARCHIVED_TIMESTAMP):
     # in models.py, we may define the reference array with a single item for the structure. We will empty it here before insert.
@@ -117,13 +120,19 @@ def new_record(db_handle, db_table, db_table_fks, add_modified_field = config.G_
 
     record["__db__name__"     ] = db_table
 
-    timestamp, timestamp_str    = utils._get_current_timestamp()
-    record["rec_timestamp"    ] = timestamp
-    record["rec_timestamp_str"] = timestamp_str
-    
+    time_log = utils._get_current_time_log()
+    record["rec_timestamp"          ] = time_log["timestamp"        ]
+    record["rec_timestamp_str"      ] = time_log["timestamp_str"    ]
+    record["rec_timestamp_yy"       ] = time_log["year"             ]   #'2022'
+    record["rec_timestamp_yy_mm"    ] = time_log["year_month"       ]   #'202202'
+    record["rec_timestamp_yy_mm_dd" ] = time_log["year_month_day"   ]   #'20220215'
+
     if add_modified_field:
-        record["last_modified_timestamp"] = ""
-        record["last_modified_timestamp_str"] = ""
+        record["last_modified_timestamp"            ] = ""
+        record["last_modified_timestamp_str"        ] = ""
+        record["last_modified_timestamp_yy"         ] = ""
+        record["last_modified_timestamp_yy_mm"      ] = ""
+        record["last_modified_timestamp_yy_mm_dd"   ] = ""
 
     if add_archived_field:
         _db_add_archive_field(record)
@@ -146,13 +155,19 @@ def new(db_handle, db_table, add_modified_field = config.G_RECORD_ADD_MODIFIED_T
 
     record["__db__name__"     ] = db_table
 
-    timestamp, timestamp_str    = utils._get_current_timestamp()
-    record["rec_timestamp"    ] = timestamp
-    record["rec_timestamp_str"] = timestamp_str
+    time_log = utils._get_current_time_log()
+    record["rec_timestamp"          ] = time_log["timestamp"        ]
+    record["rec_timestamp_str"      ] = time_log["timestamp_str"    ]
+    record["rec_timestamp_yy"       ] = time_log["year"             ]   #'2022'
+    record["rec_timestamp_yy_mm"    ] = time_log["year_month"       ]   #'202202'
+    record["rec_timestamp_yy_mm_dd" ] = time_log["year_month_day"   ]   #'20220215'
     
     if add_modified_field:
-        record["last_modified_timestamp"] = ""
-        record["last_modified_timestamp_str"] = ""
+        record["last_modified_timestamp"            ] = ""
+        record["last_modified_timestamp_str"        ] = ""
+        record["last_modified_timestamp_yy"         ] = ""
+        record["last_modified_timestamp_yy_mm"      ] = ""
+        record["last_modified_timestamp_yy_mm_dd"   ] = ""
 
     if add_archived_field:
         _db_add_archive_field(record)
@@ -187,12 +202,24 @@ def simple_load(db_table, complete=False):
     record.pop('__db__referenced__names__', None)
 
     if complete:
-        record["rec_timestamp"    ] = ""
-        record["rec_timestamp_str"] = ""
-        record["archived_timestamp"]        = ""
-        record["archived_timestamp_str"]    = ""
-        record["last_modified_timestamp"] = ""
-        record["last_modified_timestamp_str"] = ""
+        record["rec_timestamp"          ] = ""
+        record["rec_timestamp_str"      ] = ""
+        record["rec_timestamp_yy"       ] = ""
+        record["rec_timestamp_yy_mm"    ] = ""
+        record["rec_timestamp_yy_mm_dd" ] = ""
+
+        record["archived_timestamp"         ] = ""
+        record["archived_timestamp_str"     ] = ""
+        record["archived_timestamp_yy"      ] = ""
+        record["archived_timestamp_yy_mm"   ] = ""
+        record["archived_timestamp_yy_mm_dd"] = ""
+
+        record["last_modified_timestamp"            ] = ""
+        record["last_modified_timestamp_str"        ] = ""
+        record["last_modified_timestamp_yy"         ] = ""
+        record["last_modified_timestamp_yy_mm"      ] = ""
+        record["last_modified_timestamp_yy_mm_dd"   ] = ""
+
         record["_id"  ] = ""
         record["ipkey"] = ""
         

@@ -1,0 +1,8 @@
+# This is a sample package requirement library for a project
+# add the main package only, not the dependencies.
+Flask==2.0.3
+pymongo==4.0.1
+requests==2.27.1
+dnspython==2.2.0
+gunicorn==20.1.0
+Flask-WTF==1.0.0

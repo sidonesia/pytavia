@@ -372,9 +372,16 @@ class bulk_db_action:
                 if touch_timestamp:
                     if "$set" not in update:
                         update["$set"] = {}
-                    timestamp, timestamp_str = utils._get_current_timestamp()
-                    update["$set"]["last_modified_timestamp"    ] = timestamp
-                    update["$set"]["last_modified_timestamp_str"] = timestamp_str
+                    # timestamp, timestamp_str = utils._get_current_timestamp()
+                    # update["$set"]["last_modified_timestamp"    ] = timestamp
+                    # update["$set"]["last_modified_timestamp_str"] = timestamp_str
+
+                    time_log = utils._get_current_time_log()
+                    update["$set"]["last_modified_timestamp"    ] = time_log["timestamp"        ]
+                    update["$set"]["last_modified_timestamp_str"] = time_log["timestamp_str"    ]
+                    update["$set"]["last_modified_timestamp_yy"] = time_log["year"             ]
+                    update["$set"]["last_modified_timestamp_yy_mm"] = time_log["year_month"       ]
+                    update["$set"]["last_modified_timestamp_yy_mm_dd"] = time_log["year_month_day"   ]
 
                 if array_filter != None:
                     self.add(
@@ -527,9 +534,16 @@ class bulk_db_action:
                 if touch_timestamp:
                     if "$set" not in update:
                         update["$set"] = {}
-                    timestamp, timestamp_str = utils._get_current_timestamp()
-                    update["$set"]["last_modified_timestamp"    ] = timestamp
-                    update["$set"]["last_modified_timestamp_str"] = timestamp_str
+                    # timestamp, timestamp_str = utils._get_current_timestamp()
+                    # update["$set"]["last_modified_timestamp"    ] = timestamp
+                    # update["$set"]["last_modified_timestamp_str"] = timestamp_str
+
+                    time_log = utils._get_current_time_log()
+                    update["$set"]["last_modified_timestamp"    ] = time_log["timestamp"        ]
+                    update["$set"]["last_modified_timestamp_str"] = time_log["timestamp_str"    ]
+                    update["$set"]["last_modified_timestamp_yy"] = time_log["year"             ]
+                    update["$set"]["last_modified_timestamp_yy_mm"] = time_log["year_month"       ]
+                    update["$set"]["last_modified_timestamp_yy_mm_dd"] = time_log["year_month_day"   ]
 
                 if array_filter != None:
                     self.add(
@@ -646,9 +660,16 @@ class bulk_db_action:
         if touch_timestamp:
             if "$set" not in update:
                 update["$set"] = {}
-            timestamp, timestamp_str = utils._get_current_timestamp()
-            update["$set"]["last_modified_timestamp"    ] = timestamp
-            update["$set"]["last_modified_timestamp_str"] = timestamp_str
+            # timestamp, timestamp_str = utils._get_current_timestamp()
+            # update["$set"]["last_modified_timestamp"    ] = timestamp
+            # update["$set"]["last_modified_timestamp_str"] = timestamp_str
+
+            time_log = utils._get_current_time_log()
+            update["$set"]["last_modified_timestamp"    ] = time_log["timestamp"        ]
+            update["$set"]["last_modified_timestamp_str"] = time_log["timestamp_str"    ]
+            update["$set"]["last_modified_timestamp_yy"] = time_log["year"             ]
+            update["$set"]["last_modified_timestamp_yy_mm"] = time_log["year_month"       ]
+            update["$set"]["last_modified_timestamp_yy_mm_dd"] = time_log["year_month_day"   ]
 
         return update
 
@@ -714,9 +735,16 @@ class bulk_db_action:
         if touch_timestamp:
             if "$set" not in update:
                 update["$set"] = {}
-            timestamp, timestamp_str = utils._get_current_timestamp()
-            update["$set"]["last_modified_timestamp"    ] = timestamp
-            update["$set"]["last_modified_timestamp_str"] = timestamp_str
+            # timestamp, timestamp_str = utils._get_current_timestamp()
+            # update["$set"]["last_modified_timestamp"    ] = timestamp
+            # update["$set"]["last_modified_timestamp_str"] = timestamp_str
+
+            time_log = utils._get_current_time_log()
+            update["$set"]["last_modified_timestamp"    ] = time_log["timestamp"        ]
+            update["$set"]["last_modified_timestamp_str"] = time_log["timestamp_str"    ]
+            update["$set"]["last_modified_timestamp_yy"] = time_log["year"             ]
+            update["$set"]["last_modified_timestamp_yy_mm"] = time_log["year_month"       ]
+            update["$set"]["last_modified_timestamp_yy_mm_dd"] = time_log["year_month_day"   ]
         
         return update
 
@@ -806,6 +834,7 @@ class bulk_db_action:
             elif action == DELETE:
                 collection = record["collection"]
                 cmd_query  = record["query"]
+                cmd_multi_operation = record["multi_operation"  ]
 
                 if not cmd_multi_operation:
                     self.db_handle[config.mainDB][collection].delete_one(
