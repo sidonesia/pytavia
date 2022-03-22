@@ -834,6 +834,7 @@ class bulk_db_action:
             elif action == DELETE:
                 collection = record["collection"]
                 cmd_query  = record["query"]
+                cmd_multi_operation = record["multi_operation"  ]
 
                 if not cmd_multi_operation:
                     self.db_handle[config.mainDB][collection].delete_one(
