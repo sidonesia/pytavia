@@ -90,7 +90,7 @@ class security_lib:
             #
             # Start processing the token here
             #
-            sequance    = self.sequance( client_params )
+            sequence    = self.sequance( client_params )
             temp_token  = acc_label  + "%|%" +\
                           request_id + "%|%" +\
                           key        + "%|%" +\
