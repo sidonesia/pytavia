@@ -196,10 +196,15 @@ def _allowed_file(filename, extensions):
 def is_image(response, field_dict, process_name = ""):
     allowed_extensions = {'png', 'jpg', 'jpeg', 'gif', 'apng', 'avif', 'jfif', 'pjpeg', 'pjp', 'svg', 'webp', 'bmp', 'ico', 'cur'}
     for key, value in field_dict.items():
-        print(value)
+        # print(value)
         if type(value) != str or _allowed_file(value, allowed_extensions) == False:
             response.put( "status_code" ,  config.G_STATUS["NOT_IMAGE"]['CODE']             )
             response.put( "status"      ,  _process_name(response, process_name)            )
             response.put( "desc"        ,  "The field '{}' should be an image".format(key)  )
             return False
     return True
+
+####################################
+### PROJECT SPECIFIC VALIDATIONS ###
+####################################
+

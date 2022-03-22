@@ -1,4 +1,3 @@
-import datetime
 import time
 import random
 import hashlib
@@ -8,16 +7,17 @@ import sys
 import base64
 import requests 
 import json
+import enum
 
+from datetime import datetime, timedelta, timezone
+
+sys.path.append("pytavia_core"    )
+sys.path.append("pytavia_settings")
+sys.path.append("pytavia_storage" )
+sys.path.append("pytavia_modules" )
 
 from pytavia_core import config
 from pytavia_core import database
-from flask import Flask
-from flask import redirect
-from flask import make_response
-
-app            = Flask( __name__, config.G_STATIC_URL_PATH )
-app.secret_key = config.G_FLASK_SECRET
 
 wmsDB = database.get_db_conn( config.mainDB )
 
