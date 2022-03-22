@@ -20,7 +20,7 @@ if [ ! -z "$1" ]; then
         fi
 
         # activate virtualenv
-        source $VENVDIR/bin/activate
+        . $VENVDIR/bin/activate
 
         # install dependencies
         pip install -r requirements.txt

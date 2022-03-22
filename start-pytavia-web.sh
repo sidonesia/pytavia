@@ -3,7 +3,7 @@
 APPNAME=PYTAVIA
 HOST=localhost
 PORT=49000
-VENVDIR="venv"  # or empty if not using a python env
+VENVDIR="venv"  # "venv" or empty if not using a python env
 
 # ./start-pytavia-web.sh production 
 # ./start-pytavia-web.sh staging 
@@ -20,7 +20,7 @@ if [ ! -z "$1" ]; then
         fi
 
         # activate virtualenv
-        source venv/bin/activate
+        . $VENVDIR/bin/activate
 
         # install dependencies
         pip install -r requirements.txt
@@ -49,13 +49,13 @@ if [ ! -z "$1" ]; then
         WORKERS=$((CORES*2+1))
         pip install gunicorn
         nohup gunicorn -n $APPNAME -b $HOST:$PORT -w $WORKERS server:app >> pytavia.out 2>&1 &
-        printf "\n#########################################\n"
-        printf "\nApplication $APPNAME has been started ...\n"
-        printf "\n#########################################\n"
     else
         export FLASK_APP=server.py
         nohup flask run --host=$HOST --port=$PORT >> pytavia.out 2>&1 &
     fi
+    printf "\n#########################################\n"
+    printf "\nApplication $APPNAME has been started ...\n"
+    printf "\n#########################################\n"
 
 # ./start-pytavia.sh
 else
